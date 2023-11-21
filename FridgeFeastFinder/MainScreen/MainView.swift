@@ -79,11 +79,13 @@ class MainView: UIView {
             createAccButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             createAccButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             createAccButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            createAccButton.heightAnchor.constraint(equalToConstant: 50),
 
             loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             loginButton.bottomAnchor.constraint(equalTo: createAccButton.topAnchor, constant: -20),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D479A2B0D4499009E10A7 /* MainView.swift */; };
+		0F3D479F2B0D5004009E10A7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D479E2B0D5004009E10A7 /* SignInView.swift */; };
+		0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47A02B0D5070009E10A7 /* SignInViewController.swift */; };
+		0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47A22B0D5852009E10A7 /* CreateAccountView.swift */; };
+		0F3D47A52B0D5864009E10A7 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47A42B0D5864009E10A7 /* CreateAccountViewController.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		0F3D479A2B0D4499009E10A7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0F3D479E2B0D5004009E10A7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		0F3D47A02B0D5070009E10A7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0F3D47A22B0D5852009E10A7 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		0F3D47A42B0D5864009E10A7 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +56,24 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		0F3D479C2B0D4F10009E10A7 /* SignInScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D479E2B0D5004009E10A7 /* SignInView.swift */,
+				0F3D47A02B0D5070009E10A7 /* SignInViewController.swift */,
+			);
+			path = SignInScreen;
+			sourceTree = "<group>";
+		};
+		0F3D479D2B0D4F20009E10A7 /* CreateAccountScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D47A22B0D5852009E10A7 /* CreateAccountView.swift */,
+				0F3D47A42B0D5864009E10A7 /* CreateAccountViewController.swift */,
+			);
+			path = CreateAccountScreen;
+			sourceTree = "<group>";
+		};
 		0FC179812B067A5200A1397A = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +93,8 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D479D2B0D4F20009E10A7 /* CreateAccountScreen */,
+				0F3D479C2B0D4F10009E10A7 /* SignInScreen */,
 				0F3D47992B0D446F009E10A7 /* MainScreen */,
 				0FC1798D2B067A5200A1397A /* AppDelegate.swift */,
 				0FC1798F2B067A5200A1397A /* SceneDelegate.swift */,
@@ -151,8 +179,12 @@
 			files = (
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
+				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
+				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
+				0F3D47A52B0D5864009E10A7 /* CreateAccountViewController.swift in Sources */,
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
 				0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */,
+				0F3D479F2B0D5004009E10A7 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
