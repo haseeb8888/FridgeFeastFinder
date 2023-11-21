@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D479A2B0D4499009E10A7 /* MainView.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3D479A2B0D4499009E10A7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3D47992B0D446F009E10A7 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0FC179912B067A5200A1397A /* ViewController.swift */,
+				0F3D479A2B0D4499009E10A7 /* MainView.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		0FC179812B067A5200A1397A = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +67,9 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47992B0D446F009E10A7 /* MainScreen */,
 				0FC1798D2B067A5200A1397A /* AppDelegate.swift */,
 				0FC1798F2B067A5200A1397A /* SceneDelegate.swift */,
-				0FC179912B067A5200A1397A /* ViewController.swift */,
 				0FC179932B067A5200A1397A /* Main.storyboard */,
 				0FC179962B067A5400A1397A /* Assets.xcassets */,
 				0FC179982B067A5400A1397A /* LaunchScreen.storyboard */,
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
+				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
 				0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */,
 			);
