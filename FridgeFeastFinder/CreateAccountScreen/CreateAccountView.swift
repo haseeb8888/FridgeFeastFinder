@@ -9,6 +9,7 @@ import UIKit
 
 class CreateAccountView: UIView {
 
+    var textFieldName: UITextField!
     var emailTextField: UITextField!
     var passwordTextField: UITextField!
     var confirmPasswordTextField: UITextField!
@@ -19,6 +20,7 @@ class CreateAccountView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
+        setuptextFieldName()
         setupEmailTextField()
         setupPasswordTextField()
         setupConfirmPasswordTextField()
@@ -26,6 +28,17 @@ class CreateAccountView: UIView {
         setupCreateAccLabel()
         setupTitleLabel()
         setupConstraints()
+    }
+    
+    func setuptextFieldName(){
+        textFieldName = UITextField()
+        textFieldName.placeholder = "Name"
+        textFieldName.keyboardType = .default
+        textFieldName.borderStyle = .roundedRect
+        textFieldName.autocapitalizationType = .none
+        textFieldName.autocorrectionType = .no
+        textFieldName.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(textFieldName)
     }
     
     func setupEmailTextField() {
@@ -98,9 +111,14 @@ class CreateAccountView: UIView {
             createAccountLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             createAccountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
             
+            textFieldName.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
+            textFieldName.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+            textFieldName.topAnchor.constraint(equalTo: createAccountLabel.bottomAnchor, constant: 20),
+            textFieldName.heightAnchor.constraint(equalToConstant: 50),
+            
             emailTextField.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
             emailTextField.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
-            emailTextField.topAnchor.constraint(equalTo: createAccountLabel.bottomAnchor, constant: 20), // Adjusted spacing
+            emailTextField.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 20),
             emailTextField.heightAnchor.constraint(equalToConstant: 50),
             
             passwordTextField.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
