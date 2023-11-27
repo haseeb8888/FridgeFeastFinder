@@ -52,7 +52,7 @@ extension CreateAccountViewController {
             }else{
                 //MARK: there is a error creating the user...
                 showErrorAlert(message: error.debugDescription)
-                print(error)
+                print(error!)
             }
         })
         

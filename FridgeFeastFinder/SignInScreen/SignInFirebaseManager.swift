@@ -18,7 +18,7 @@ extension SignInViewController {
                 self.navigationController?.pushViewController(dashBoardViewController, animated: true)
             }else{
                 showErrorAlert(message: error.debugDescription)
-                print(error)
+                print(error!)
             }
             
         })
