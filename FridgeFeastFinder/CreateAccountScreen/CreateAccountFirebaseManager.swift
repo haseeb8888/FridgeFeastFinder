@@ -49,10 +49,9 @@ extension CreateAccountViewController {
             if error == nil{
                 //MARK: the user creation is successful...
                 self.setNameOfTheUserInFirebaseAuth(name: name)
-                self.showErrorAlert(message: "User Created Successfully")
             }else{
                 //MARK: there is a error creating the user...
-                self.showErrorAlert(message: error.debugDescription)
+                showErrorAlert(message: error.debugDescription)
                 print(error)
             }
         })
@@ -74,7 +73,10 @@ extension CreateAccountViewController {
                 self.hideActivityIndicator()
                 
                 //MARK: pop the current controller...
-                self.navigationController?.popViewController(animated: true)
+                let dashBoardViewController = DashBoardViewController()
+                dashBoardViewController.navigationItem.hidesBackButton = true
+                self.navigationController?.pushViewController(dashBoardViewController, animated: true)
+                // self.navigationController?.popViewController(animated: true)
             }else{
                 //MARK: there was an error updating the profile...
                 print("Error occured: \(String(describing: error))")
@@ -82,36 +84,4 @@ extension CreateAccountViewController {
         })
     }
     
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
-    }
-    
-    func isValidPassword(_ password: String, confirmPassword: String) -> Bool {
-        
-        // Check if passwords are the same
-        guard password == confirmPassword else {
-            return false
-        }
-
-        // Check if password length is greater than 6
-        guard password.count > 6 else {
-            return false
-        }
-
-        return true
-    }
-    
-    func showErrorAlert(message: String?){
-        let alert = UIAlertController(
-            title: "Error!", message: message,
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        
-        self.present(alert, animated: true)
-    }
 }

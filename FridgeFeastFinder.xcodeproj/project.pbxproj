@@ -23,6 +23,10 @@
 		0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47BC2B15117A009E10A7 /* ProgressSpinnerDelegate.swift */; };
 		0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47BE2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift */; };
 		0F3D47C12B152307009E10A7 /* CreateProgressIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C02B152307009E10A7 /* CreateProgressIndicatorManager.swift */; };
+		0F3D47C42B15342C009E10A7 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C32B15342C009E10A7 /* DashBoardView.swift */; };
+		0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C52B153448009E10A7 /* DashBoardViewController.swift */; };
+		0F3D47C92B153867009E10A7 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C82B153867009E10A7 /* Validations.swift */; };
+		0F3D47CB2B1539C8009E10A7 /* SignInFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -42,6 +46,10 @@
 		0F3D47BC2B15117A009E10A7 /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerDelegate.swift; sourceTree = "<group>"; };
 		0F3D47BE2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFirebaseManager.swift; sourceTree = "<group>"; };
 		0F3D47C02B152307009E10A7 /* CreateProgressIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProgressIndicatorManager.swift; sourceTree = "<group>"; };
+		0F3D47C32B15342C009E10A7 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		0F3D47C52B153448009E10A7 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		0F3D47C82B153867009E10A7 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFirebaseManager.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +91,7 @@
 			children = (
 				0F3D479E2B0D5004009E10A7 /* SignInView.swift */,
 				0F3D47A02B0D5070009E10A7 /* SignInViewController.swift */,
+				0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */,
 			);
 			path = SignInScreen;
 			sourceTree = "<group>";
@@ -110,8 +119,18 @@
 		0F3D47C22B152BCB009E10A7 /* DashBoardScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47C32B15342C009E10A7 /* DashBoardView.swift */,
+				0F3D47C52B153448009E10A7 /* DashBoardViewController.swift */,
 			);
 			path = DashBoardScreen;
+			sourceTree = "<group>";
+		};
+		0F3D47C72B153850009E10A7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D47C82B153867009E10A7 /* Validations.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		0FC179812B067A5200A1397A = {
@@ -133,6 +152,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47C72B153850009E10A7 /* Util */,
 				0F3D47C22B152BCB009E10A7 /* DashBoardScreen */,
 				0F3D47B92B151117009E10A7 /* Progress Indicator */,
 				0F3D479D2B0D4F20009E10A7 /* CreateAccountScreen */,
@@ -235,13 +255,17 @@
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
+				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
+				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
 				0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */,
 				0F3D47A52B0D5864009E10A7 /* CreateAccountViewController.swift in Sources */,
+				0F3D47CB2B1539C8009E10A7 /* SignInFirebaseManager.swift in Sources */,
 				0F3D47C12B152307009E10A7 /* CreateProgressIndicatorManager.swift in Sources */,
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
+				0F3D47C42B15342C009E10A7 /* DashBoardView.swift in Sources */,
 				0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */,
 				0F3D479F2B0D5004009E10A7 /* SignInView.swift in Sources */,
 			);
