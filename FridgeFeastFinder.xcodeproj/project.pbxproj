@@ -33,6 +33,8 @@
 		0FC179952B067A5200A1397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179932B067A5200A1397A /* Main.storyboard */; };
 		0FC179972B067A5400A1397A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179962B067A5400A1397A /* Assets.xcassets */; };
 		0FC1799A2B067A5400A1397A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179982B067A5400A1397A /* LaunchScreen.storyboard */; };
+		8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */; };
+		870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		0FC179962B067A5400A1397A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC179992B067A5400A1397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC1799B2B067A5400A1397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeView.swift; sourceTree = "<group>"; };
+		8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				8709549C2B158C680090E9B8 /* DisplayRecipeScreen */,
 				0F3D47C72B153850009E10A7 /* Util */,
 				0F3D47C22B152BCB009E10A7 /* DashBoardScreen */,
 				0F3D47B92B151117009E10A7 /* Progress Indicator */,
@@ -167,6 +172,15 @@
 				0F3D47AA2B150D85009E10A7 /* GoogleService-Info.plist */,
 			);
 			path = FridgeFeastFinder;
+			sourceTree = "<group>";
+		};
+		8709549C2B158C680090E9B8 /* DisplayRecipeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */,
+				8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */,
+			);
+			path = DisplayRecipeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
+				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
 				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
+				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
 				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
 				0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */,
