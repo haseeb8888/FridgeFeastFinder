@@ -24,13 +24,13 @@ class ViewController: UIViewController {
         mainView.createAccButton.addTarget(self, action: #selector(onButtonCreateAccTapped), for: .touchUpInside)
 
         // Check if the user is logged in using Firebase Authentication
-        if let currentUser = Auth.auth().currentUser {
-            print("User is logged in with UID: \(currentUser.uid)")
-            showTabBar()
-        } else {
-            print("User is not logged in")
-            showMainView()
-        }
+//        if let currentUser = Auth.auth().currentUser {
+//            print("User is logged in with UID: \(currentUser.uid)")
+//            showTabBar()
+//        } else {
+//            print("User is not logged in")
+//            showMainView()
+//        }
     }
 
     @objc func onButtonSignInTapped() {

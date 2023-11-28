@@ -28,7 +28,6 @@
 		0F3D47C92B153867009E10A7 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C82B153867009E10A7 /* Validations.swift */; };
 		0F3D47CB2B1539C8009E10A7 /* SignInFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */; };
 		0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */; };
-		0F3D47CF2B167C3A009E10A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CE2B167C3A009E10A7 /* MainViewController.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -58,7 +57,6 @@
 		0F3D47C82B153867009E10A7 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFirebaseManager.swift; sourceTree = "<group>"; };
 		0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFTabBarController.swift; sourceTree = "<group>"; };
-		0F3D47CE2B167C3A009E10A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				0FC179912B067A5200A1397A /* ViewController.swift */,
 				0F3D479A2B0D4499009E10A7 /* MainView.swift */,
-				0F3D47CE2B167C3A009E10A7 /* MainViewController.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
-				0F3D47CF2B167C3A009E10A7 /* MainViewController.swift in Sources */,
 				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
