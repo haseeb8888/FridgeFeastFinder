@@ -38,7 +38,7 @@
 		870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */; };
 		870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */; };
 		870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */; };
-		870954A72B1592EE0090E9B8 /* IngredientSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelection.swift */; };
+		870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,7 @@
 		8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeViewController.swift; sourceTree = "<group>"; };
 		870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionViewController.swift; sourceTree = "<group>"; };
-		870954A62B1592EE0090E9B8 /* IngredientSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelection.swift; sourceTree = "<group>"; };
+		870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */,
-				870954A62B1592EE0090E9B8 /* IngredientSelection.swift */,
+				870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */,
 			);
 			path = IngredientSelectionScreen;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
 				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
-				870954A72B1592EE0090E9B8 /* IngredientSelection.swift in Sources */,
+				870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
