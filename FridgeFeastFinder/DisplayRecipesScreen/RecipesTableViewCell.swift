@@ -58,6 +58,17 @@ class RecipesTableViewCell: UITableViewCell {
     func setupRecipeImage(){
         
     }
+    
+    func initConstraints(){
+        NSLayoutConstraint.activate([
+            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
+            wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            
+            
+        ])
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
