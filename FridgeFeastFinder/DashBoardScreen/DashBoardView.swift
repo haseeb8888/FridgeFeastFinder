@@ -14,8 +14,8 @@ class DashBoardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
-        setupLoginButton()
-        setupConstraints()
+        // setupLoginButton()
+        // setupConstraints()
     }
     
     

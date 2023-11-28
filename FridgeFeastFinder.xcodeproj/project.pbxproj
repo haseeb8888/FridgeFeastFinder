@@ -28,6 +28,8 @@
 		0F3D47C92B153867009E10A7 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47C82B153867009E10A7 /* Validations.swift */; };
 		0F3D47CB2B1539C8009E10A7 /* SignInFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */; };
 		0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */; };
+		0F3D47D22B169615009E10A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47D12B169615009E10A7 /* ProfileViewController.swift */; };
+		0F3D47D42B169626009E10A7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47D32B169626009E10A7 /* ProfileView.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		0F3D47C82B153867009E10A7 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		0F3D47CA2B1539C8009E10A7 /* SignInFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFirebaseManager.swift; sourceTree = "<group>"; };
 		0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFTabBarController.swift; sourceTree = "<group>"; };
+		0F3D47D12B169615009E10A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0F3D47D32B169626009E10A7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,22 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		0F3D47D02B1695F1009E10A7 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D47D12B169615009E10A7 /* ProfileViewController.swift */,
+				0F3D47D32B169626009E10A7 /* ProfileView.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		0F3D47D52B169C4A009E10A7 /* BookMarksScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookMarksScreen;
+			sourceTree = "<group>";
+		};
 		0FC179812B067A5200A1397A = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +185,8 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47D52B169C4A009E10A7 /* BookMarksScreen */,
+				0F3D47D02B1695F1009E10A7 /* ProfileScreen */,
 				870954A32B1592AF0090E9B8 /* IngredientSelectionScreen */,
 				8709549C2B158C680090E9B8 /* DisplayRecipesScreen */,
 				0F3D47C72B153850009E10A7 /* Util */,
@@ -301,6 +323,8 @@
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
 				0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */,
 				0F3D47A52B0D5864009E10A7 /* CreateAccountViewController.swift in Sources */,
+				0F3D47D22B169615009E10A7 /* ProfileViewController.swift in Sources */,
+				0F3D47D42B169626009E10A7 /* ProfileView.swift in Sources */,
 				0F3D47CB2B1539C8009E10A7 /* SignInFirebaseManager.swift in Sources */,
 				0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */,
 				0F3D47C12B152307009E10A7 /* CreateProgressIndicatorManager.swift in Sources */,
