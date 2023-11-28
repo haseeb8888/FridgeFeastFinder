@@ -36,6 +36,8 @@
 		8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */; };
 		870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */; };
 		870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */; };
+		870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */; };
+		870954A72B1592EE0090E9B8 /* IngredientSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeView.swift; sourceTree = "<group>"; };
 		8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeViewController.swift; sourceTree = "<group>"; };
 		870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
+		870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionViewController.swift; sourceTree = "<group>"; };
+		870954A62B1592EE0090E9B8 /* IngredientSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				870954A32B1592AF0090E9B8 /* IngredientSelectionScreen */,
 				8709549C2B158C680090E9B8 /* DisplayRecipesScreen */,
 				0F3D47C72B153850009E10A7 /* Util */,
 				0F3D47C22B152BCB009E10A7 /* DashBoardScreen */,
@@ -184,6 +189,15 @@
 				870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */,
 			);
 			path = DisplayRecipesScreen;
+			sourceTree = "<group>";
+		};
+		870954A32B1592AF0090E9B8 /* IngredientSelectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */,
+				870954A62B1592EE0090E9B8 /* IngredientSelection.swift */,
+			);
+			path = IngredientSelectionScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +287,10 @@
 				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
+				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
 				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
+				870954A72B1592EE0090E9B8 /* IngredientSelection.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
