@@ -9,26 +9,21 @@ import UIKit
 
 class IngredientSelectionView: UIView {
     
-    var contentScroller:UIScrollView!
     var textFieldSearch:UITextField!
+    var findRecipesButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.backgroundColor = .systemBackground
-        setupContentScroller()
         setupTextFieldSearch()
+        setupFindRecipesButton()
         initConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setupContentScroller(){
-        contentScroller = UIScrollView()
-        contentScroller.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(contentScroller)
-    }
+
     
     func setupTextFieldSearch(){
         textFieldSearch = UITextField()
@@ -36,17 +31,33 @@ class IngredientSelectionView: UIView {
         textFieldSearch.borderStyle = .roundedRect
         textFieldSearch.keyboardType = .default
         textFieldSearch.translatesAutoresizingMaskIntoConstraints = false
-        contentScroller.addSubview(textFieldSearch)
+    }
+    
+    func setupFindRecipesButton(){
+        findRecipesButton = UIButton(type: .system)
+        findRecipesButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        findRecipesButton.setTitle("Find Recipes", for: .normal)
+        findRecipesButton.setTitleColor(.white, for: .normal)
+        findRecipesButton.backgroundColor = .black
+        findRecipesButton.layer.cornerRadius = 8
+        findRecipesButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(findRecipesButton)
     }
     
     func initConstraints(){
+        
+        let margins = self.layoutMarginsGuide
         NSLayoutConstraint.activate([
-            contentScroller.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            contentScroller.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-            contentScroller.widthAnchor.constraint(equalTo:self.safeAreaLayoutGuide.widthAnchor),
-            contentScroller.heightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.heightAnchor),
             
+            textFieldSearch.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
+            textFieldSearch.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+            textFieldSearch.topAnchor.constraint(equalTo: margins.topAnchor, constant: 20),
+            textFieldSearch.heightAnchor.constraint(equalToConstant: 50),
             
+            findRecipesButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
+            findRecipesButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+            findRecipesButton.topAnchor.constraint(equalTo: textFieldSearch.bottomAnchor, constant: 40),
+            findRecipesButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 
