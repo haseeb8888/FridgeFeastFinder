@@ -44,7 +44,7 @@ class MainView: UIView {
     func setupButtonLogin() {
         loginButton = UIButton(type: .system)
         loginButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        loginButton.setTitle("Sign In", for: .normal)
+        loginButton.setTitle("Sign Test", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.backgroundColor = .black
         loginButton.layer.cornerRadius = 8 // Make button corners round
