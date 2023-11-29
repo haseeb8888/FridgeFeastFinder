@@ -41,6 +41,7 @@
 		870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */; };
 		870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */; };
 		870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */; };
+		FE04201F97168801C12AC828 /* Pods_FridgeFeastFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,11 +70,14 @@
 		0FC179962B067A5400A1397A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC179992B067A5400A1397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC1799B2B067A5400A1397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59FD704A9F43599DD09591EE /* Pods-FridgeFeastFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeFeastFinder.debug.xcconfig"; path = "Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FridgeFeastFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeView.swift; sourceTree = "<group>"; };
 		8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeViewController.swift; sourceTree = "<group>"; };
 		870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionViewController.swift; sourceTree = "<group>"; };
 		870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionView.swift; sourceTree = "<group>"; };
+		C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeFeastFinder.release.xcconfig"; path = "Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				0F3D47B02B150E18009E10A7 /* FirebaseDatabase in Frameworks */,
 				0F3D47AE2B150E18009E10A7 /* FirebaseAuth in Frameworks */,
 				0F3D47B82B150E18009E10A7 /* FirebaseStorage in Frameworks */,
+				FE04201F97168801C12AC828 /* Pods_FridgeFeastFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +176,8 @@
 			children = (
 				0FC1798C2B067A5200A1397A /* FridgeFeastFinder */,
 				0FC1798B2B067A5200A1397A /* Products */,
+				A5520F6DF9E6596A1BBC824A /* Pods */,
+				49BFD6BB7FE2C1CD99812B84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +213,14 @@
 			path = FridgeFeastFinder;
 			sourceTree = "<group>";
 		};
+		49BFD6BB7FE2C1CD99812B84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8709549C2B158C680090E9B8 /* DisplayRecipesScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +240,16 @@
 			path = IngredientSelectionScreen;
 			sourceTree = "<group>";
 		};
+		A5520F6DF9E6596A1BBC824A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59FD704A9F43599DD09591EE /* Pods-FridgeFeastFinder.debug.xcconfig */,
+				C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FC1799E2B067A5400A1397A /* Build configuration list for PBXNativeTarget "FridgeFeastFinder" */;
 			buildPhases = (
+				CA797AB5B599A1F3D7D281BB /* [CP] Check Pods Manifest.lock */,
 				0FC179862B067A5200A1397A /* Sources */,
 				0FC179872B067A5200A1397A /* Frameworks */,
 				0FC179882B067A5200A1397A /* Resources */,
+				A94410ACF2661911AF11A68B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +329,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A94410ACF2661911AF11A68B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA797AB5B599A1F3D7D281BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FridgeFeastFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FC179862B067A5200A1397A /* Sources */ = {
@@ -473,6 +542,7 @@
 		};
 		0FC1799F2B067A5400A1397A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59FD704A9F43599DD09591EE /* Pods-FridgeFeastFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -501,6 +571,7 @@
 		};
 		0FC179A02B067A5400A1397A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
