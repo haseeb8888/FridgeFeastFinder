@@ -9,12 +9,6 @@ import UIKit
 
 class IngredientSelectionViewController: UIViewController {
     
-    let ingredientSelectionView = IngredientSelection()
-    
-    override func loadView() {
-        view = ingredientSelectionView
-    }
-
     let ingredientSelectionView = IngredientSelectionView()
     
     override func loadView() {
