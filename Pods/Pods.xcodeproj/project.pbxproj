@@ -449,7 +449,7 @@
 		57AC19E62D089929B7CC43D113A459D8 /* MDCShadow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCShadow.h; path = components/Shadow/src/MDCShadow.h; sourceTree = "<group>"; };
 		5A77B34963519DF12BEAA43F6F813008 /* MDCFontScaler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCFontScaler.h; path = components/Typography/src/MDCFontScaler.h; sourceTree = "<group>"; };
 		5C0EA9E0C291AB5A08F29100E448D858 /* MDCRippleTouchController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCRippleTouchController.h; path = components/Ripple/src/MDCRippleTouchController.h; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E460AC5C6FBD50B7CCA9EA39BA3A525 /* UIImage+MaterialRTL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MaterialRTL.m"; path = "Sources/UIImage+MaterialRTL.m"; sourceTree = "<group>"; };
 		5E58E43CC470DED0349BDF35E711BB9C /* MDCChipFieldDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCChipFieldDelegate.h; path = components/Chips/src/MDCChipFieldDelegate.h; sourceTree = "<group>"; };
 		5F597B6CE3BAF2F8641E3C456FDE4AE2 /* MaterialShapes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialShapes.h; path = components/Shapes/src/MaterialShapes.h; sourceTree = "<group>"; };
@@ -521,19 +521,19 @@
 		98BA6BF4F4301CC6FE00674C61F937BE /* MDCEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCEdgeTreatment.h; path = components/Shapes/src/MDCEdgeTreatment.h; sourceTree = "<group>"; };
 		98F7443884E0D1EE43792B644F8A9518 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		993C3E9D3F3A3BF9524CCDC022C83F2E /* MDCTextInputControllerLegacyDefault.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCTextInputControllerLegacyDefault.h; path = components/TextFields/src/MDCTextInputControllerLegacyDefault.h; sourceTree = "<group>"; };
-		9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MDFInternationalization; path = MDFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MDFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8B35EAE149E156C2BE63349592BA54 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		9A914829921A3B2C3F4DBDA9ADC1FD58 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		9B4443452FC124E204FE18B200BC54B0 /* MaterialTextFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialTextFields.h; path = components/TextFields/src/MaterialTextFields.h; sourceTree = "<group>"; };
 		9C022F59133CEDD63029FB4417202521 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC42FABA27C411AB13D2044FD92B565 /* MaterialMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialMath.h; path = components/private/Math/src/MaterialMath.h; sourceTree = "<group>"; };
 		9DF89AFC8B92D0B56DD41FB7D54D3DD5 /* MDCAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCAvailability.h; path = components/Availability/src/MDCAvailability.h; sourceTree = "<group>"; };
 		9E18CF2E2BDE85BD4336938CB4DEB2A7 /* MDCTextInputControllerBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCTextInputControllerBase.m; path = components/TextFields/src/MDCTextInputControllerBase.m; sourceTree = "<group>"; };
 		9EE781790ECF0F8AC0FABB68D02B71E8 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
 		9EFBB835AF4C82E03759B96CFACF1E4C /* MDCFontTextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCFontTextStyle.h; path = components/Typography/src/MDCFontTextStyle.h; sourceTree = "<group>"; };
 		9FEC50D42D97C0AB902E81416F7D8501 /* MDCTextInputControllerLegacyFullWidth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCTextInputControllerLegacyFullWidth.h; path = components/TextFields/src/MDCTextInputControllerLegacyFullWidth.h; sourceTree = "<group>"; };
-		A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialComponents; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FCE303F43FE3FDB52B42DF33C21709 /* MDCLegacyInkLayerRippleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCLegacyInkLayerRippleDelegate.h; path = components/Ink/src/private/MDCLegacyInkLayerRippleDelegate.h; sourceTree = "<group>"; };
 		A56D71E5BC2A667B0CB0A0EF00E9A1C2 /* MDCInkViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCInkViewDelegate.h; path = components/Ink/src/MDCInkViewDelegate.h; sourceTree = "<group>"; };
 		A6C4B5452373E2E01D30515A771154A5 /* MDCRippleViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCRippleViewDelegate.h; path = components/Ripple/src/MDCRippleViewDelegate.h; sourceTree = "<group>"; };
@@ -632,7 +632,7 @@
 		F7833190AC6E386C41CF706CA3365F6A /* UIColor+MaterialElevation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+MaterialElevation.h"; path = "components/Elevation/src/UIColor+MaterialElevation.h"; sourceTree = "<group>"; };
 		FA24CA16B1737A0BF1BE95974F12F176 /* MDFTextAccessibility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MDFTextAccessibility.release.xcconfig; sourceTree = "<group>"; };
 		FB18C24F267E0FEC5FBF759E77DC5CFD /* MDFColorCalculations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDFColorCalculations.m; path = src/private/MDFColorCalculations.m; sourceTree = "<group>"; };
-		FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MDFTextAccessibility; path = MDFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MDFTextAccessibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC5F67EC16A59E4269033164A3A78D6 /* MDFTextAccessibility-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MDFTextAccessibility-Info.plist"; sourceTree = "<group>"; };
 		FC4E01AF954F18E3944BFD56CEBB6AD7 /* MDFImageCalculations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDFImageCalculations.h; path = src/private/MDFImageCalculations.h; sourceTree = "<group>"; };
 		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -945,7 +945,6 @@
 				6A4AEA4D083AD2BB54A4CB835EEC220D /* Validation.swift */,
 				08A8CEC57CFCC7A3CB1D6A2E56E002CE /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -998,7 +997,6 @@
 				7B8702771AC8ECA5D6671FB0FC51A04D /* NSArray+MDFUtils.m */,
 				E3FE2759F3CBE5E7E8234ED27633C51C /* Support Files */,
 			);
-			name = MDFTextAccessibility;
 			path = MDFTextAccessibility;
 			sourceTree = "<group>";
 		};
@@ -1084,7 +1082,6 @@
 				70D5074A5793E7807FC1AF3413B04ECF /* TextFields */,
 				A017491056E1E787D3C4D2AFA3C5DEFD /* Typography */,
 			);
-			name = MaterialComponents;
 			path = MaterialComponents;
 			sourceTree = "<group>";
 		};
@@ -1161,10 +1158,10 @@
 		E865F39DBA4C08A0EE56F2250A8C5DAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents */,
-				9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization */,
-				FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents.framework */,
+				9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization.framework */,
+				FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility.framework */,
 				3544868A03C741E2194828613C915E71 /* Pods-FridgeFeastFinder */,
 			);
 			name = Products;
@@ -1258,7 +1255,6 @@
 				64DEA1F4225875491FA4CEFCE71143C8 /* UIView+MaterialRTL.m */,
 				EDD54BB8E31BA34A0D4663C05ACA8D1C /* Support Files */,
 			);
-			name = MDFInternationalization;
 			path = MDFInternationalization;
 			sourceTree = "<group>";
 		};
@@ -1455,7 +1451,7 @@
 			);
 			name = MDFInternationalization;
 			productName = MDFInternationalization;
-			productReference = 9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization */;
+			productReference = 9A2AC0B8BAC6EF061EBC28825653DF99 /* MDFInternationalization.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A8E4C927B2E899954BC2FD3314BCA9DA /* MDFTextAccessibility */ = {
@@ -1473,7 +1469,7 @@
 			);
 			name = MDFTextAccessibility;
 			productName = MDFTextAccessibility;
-			productReference = FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility */;
+			productReference = FB8220FA4D9117310AEFC629A6EE4A08 /* MDFTextAccessibility.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B4723B5744013DF08BE3A5FEAA286944 /* MaterialComponents */ = {
@@ -1493,7 +1489,7 @@
 			);
 			name = MaterialComponents;
 			productName = MaterialComponents;
-			productReference = A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents */;
+			productReference = A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D8699BDADFC788505FDFDC5603D09A36 /* Pods-FridgeFeastFinder */ = {
@@ -1533,7 +1529,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1845,7 +1841,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MaterialComponents/MaterialComponents-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MaterialComponents/MaterialComponents-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1880,7 +1876,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MDFInternationalization/MDFInternationalization-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MDFInternationalization/MDFInternationalization-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1916,7 +1912,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MDFInternationalization/MDFInternationalization-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MDFInternationalization/MDFInternationalization-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1950,7 +1946,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MDFTextAccessibility/MDFTextAccessibility-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MDFTextAccessibility/MDFTextAccessibility-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1985,7 +1981,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MaterialComponents/MaterialComponents-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MaterialComponents/MaterialComponents-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2123,7 +2119,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MDFTextAccessibility/MDFTextAccessibility-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MDFTextAccessibility/MDFTextAccessibility-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2159,7 +2155,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2232,7 +2228,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
