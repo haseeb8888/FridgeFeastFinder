@@ -13,6 +13,7 @@ class IngredientSelectionViewController: UIViewController {
     
     override func loadView() {
         view = ingredientSelectionView
+        ingredientSelectionView.findRecipesButton.addTarget(self, action: #selector(onFindRecipesButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -30,6 +31,12 @@ class IngredientSelectionViewController: UIViewController {
     
     @objc func onResetBarButtonTapped(){
         
+    }
+    
+    @objc func onFindRecipesButtonTapped(){
+        
+        let displayRecipesViewController = DisplayRecipesViewController()
+        self.navigationController?.pushViewController(displayRecipesViewController, animated: true)
     }
     
     
