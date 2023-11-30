@@ -43,6 +43,7 @@
 		870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */; };
 		87E22F6A2B18510C00425A63 /* RecipeInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E22F692B18510C00425A63 /* RecipeInstructionsView.swift */; };
 		87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E22F6B2B18512200425A63 /* RecipeInstructionsViewController.swift */; };
+		9B93A3DE2B18794D009DBE4A /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */; };
 		FE04201F97168801C12AC828 /* Pods_FridgeFeastFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionView.swift; sourceTree = "<group>"; };
 		87E22F692B18510C00425A63 /* RecipeInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsView.swift; sourceTree = "<group>"; };
 		87E22F6B2B18512200425A63 /* RecipeInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsViewController.swift; sourceTree = "<group>"; };
+		9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
 		C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeFeastFinder.release.xcconfig"; path = "Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +216,7 @@
 				0FC179982B067A5400A1397A /* LaunchScreen.storyboard */,
 				0FC1799B2B067A5400A1397A /* Info.plist */,
 				0F3D47AA2B150D85009E10A7 /* GoogleService-Info.plist */,
+				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 			);
 			path = FridgeFeastFinder;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
 				0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */,
+				9B93A3DE2B18794D009DBE4A /* APIConfigs.swift in Sources */,
 				0F3D47A52B0D5864009E10A7 /* CreateAccountViewController.swift in Sources */,
 				0F3D47D22B169615009E10A7 /* ProfileViewController.swift in Sources */,
 				0F3D47D42B169626009E10A7 /* ProfileView.swift in Sources */,
