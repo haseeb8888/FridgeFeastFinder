@@ -31,6 +31,7 @@ class IngredientSelectionView: UIView {
         textFieldSearch.borderStyle = .roundedRect
         textFieldSearch.keyboardType = .default
         textFieldSearch.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(textFieldSearch)
     }
     
     func setupFindRecipesButton(){
