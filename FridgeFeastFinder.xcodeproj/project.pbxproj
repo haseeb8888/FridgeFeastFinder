@@ -41,6 +41,8 @@
 		870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */; };
 		870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */; };
 		870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */; };
+		87E22F6A2B18510C00425A63 /* RecipeInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E22F692B18510C00425A63 /* RecipeInstructionsView.swift */; };
+		87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E22F6B2B18512200425A63 /* RecipeInstructionsViewController.swift */; };
 		FE04201F97168801C12AC828 /* Pods_FridgeFeastFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
 		870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionViewController.swift; sourceTree = "<group>"; };
 		870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionView.swift; sourceTree = "<group>"; };
+		87E22F692B18510C00425A63 /* RecipeInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsView.swift; sourceTree = "<group>"; };
+		87E22F6B2B18512200425A63 /* RecipeInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsViewController.swift; sourceTree = "<group>"; };
 		C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeFeastFinder.release.xcconfig"; path = "Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				87E22F682B1850ED00425A63 /* RecipeInstructionsScreen */,
 				0F3D47D52B169C4A009E10A7 /* BookMarksScreen */,
 				0F3D47D02B1695F1009E10A7 /* ProfileScreen */,
 				870954A32B1592AF0090E9B8 /* IngredientSelectionScreen */,
@@ -240,13 +245,21 @@
 			path = IngredientSelectionScreen;
 			sourceTree = "<group>";
 		};
+		87E22F682B1850ED00425A63 /* RecipeInstructionsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				87E22F692B18510C00425A63 /* RecipeInstructionsView.swift */,
+				87E22F6B2B18512200425A63 /* RecipeInstructionsViewController.swift */,
+			);
+			path = RecipeInstructionsScreen;
+			sourceTree = "<group>";
+		};
 		A5520F6DF9E6596A1BBC824A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				59FD704A9F43599DD09591EE /* Pods-FridgeFeastFinder.debug.xcconfig */,
 				C68958E18919099E30AB9349 /* Pods-FridgeFeastFinder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -384,10 +397,12 @@
 				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
 				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
+				87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */,
 				870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
+				87E22F6A2B18510C00425A63 /* RecipeInstructionsView.swift in Sources */,
 				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
 				0F3D47BF2B1511E8009E10A7 /* CreateAccountFirebaseManager.swift in Sources */,
