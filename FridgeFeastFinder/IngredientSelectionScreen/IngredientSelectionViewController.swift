@@ -7,13 +7,15 @@
 
 import UIKit
 
-class IngredientSelectionViewController: UIViewController {
+class IngredientSelectionViewController: UIViewController, UITextFieldDelegate {
     
     let ingredientSelectionView = IngredientSelectionView()
+    
     
     override func loadView() {
         view = ingredientSelectionView
         ingredientSelectionView.findRecipesButton.addTarget(self, action: #selector(onFindRecipesButtonTapped), for: .touchUpInside)
+        ingredientSelectionView.textFieldSearch.delegate = self
     }
     
     override func viewDidLoad() {
@@ -36,9 +38,13 @@ class IngredientSelectionViewController: UIViewController {
     @objc func onFindRecipesButtonTapped(){
         
         let displayRecipesViewController = DisplayRecipesViewController()
+        displayRecipesViewController.searchText = ingredientSelectionView.textFieldSearch.text
         self.navigationController?.pushViewController(displayRecipesViewController, animated: true)
     }
     
-    
+    func textFieldShouldReturn(_ textField: UITextField)->Bool{
+        textField.resignFirstResponder()
+        return true
+    }
     
 }

@@ -198,6 +198,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 				87E22F682B1850ED00425A63 /* RecipeInstructionsScreen */,
 				0F3D47D52B169C4A009E10A7 /* BookMarksScreen */,
 				0F3D47D02B1695F1009E10A7 /* ProfileScreen */,
@@ -216,7 +217,6 @@
 				0FC179982B067A5400A1397A /* LaunchScreen.storyboard */,
 				0FC1799B2B067A5400A1397A /* Info.plist */,
 				0F3D47AA2B150D85009E10A7 /* GoogleService-Info.plist */,
-				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 			);
 			path = FridgeFeastFinder;
 			sourceTree = "<group>";

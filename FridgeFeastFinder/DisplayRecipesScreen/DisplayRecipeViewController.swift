@@ -10,6 +10,7 @@ import UIKit
 class DisplayRecipesViewController: UIViewController {
     
     let displayRecipesScreen = DisplayRecipesView()
+    var searchText: String?
 
     
     override func loadView() {
