@@ -11,6 +11,7 @@ class IngredientSelectionView: UIView {
     
     var textFieldSearch:UITextField!
     var findRecipesButton: UIButton!
+    var tableViewSuggestions: UITableView!
     
     override init(frame: CGRect) {
         super.init(frame:frame)

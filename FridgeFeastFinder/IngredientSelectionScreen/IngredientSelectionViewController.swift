@@ -8,9 +8,10 @@
 import UIKit
 import Alamofire
 
-class IngredientSelectionViewController: UIViewController, UITextFieldDelegate {
+class IngredientSelectionViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
     let ingredientSelectionView = IngredientSelectionView()
+    var autocompleteResults: [String] = [] // array to store autocomplete suggestions
     
     
     override func loadView() {
@@ -18,6 +19,8 @@ class IngredientSelectionViewController: UIViewController, UITextFieldDelegate {
         ingredientSelectionView.findRecipesButton.addTarget(self, action: #selector(onFindRecipesButtonTapped), for: .touchUpInside)
         // so that user input for ingredient is captured and we can delegate to the display recipes screen
         ingredientSelectionView.textFieldSearch.delegate = self
+        ingredientSelectionView.tableViewSuggestions.dataSource.self
+        ingredientSelectionView.tableViewSuggestions.delegate = self
     }
     
     override func viewDidLoad() {
@@ -32,57 +35,6 @@ class IngredientSelectionViewController: UIViewController, UITextFieldDelegate {
             action: #selector(onResetBarButtonTapped)
         )
     }
-
-    
-    //MARK: add a new contact call: add endpoint...
-    func addANewIngredient(ingredient: Ingredient){
-        let endpoint = "/food/ingredients/autocomplete"
-        if let url = URL(string: APIConfigs.baseURL + endpoint){
-            
-            AF.request(url, method:.get, parameters:
-                        [
-                            "ingredent": ingredient.ingredient
-                        ])
-                .responseString(completionHandler: { response in
-                    //MARK: retrieving the status code...
-                    let status = response.response?.statusCode
-                    
-                    switch response.result{
-                    case .success(let data):
-                        //MARK: there was no network error...
-                        
-                        //MARK: status code is Optional, so unwrapping it...
-                        if let uwStatusCode = status{
-                            switch uwStatusCode{
-                                case 200...299:
-                                //MARK: the request was valid 200-level...
-                                
-                                    break
-                        
-                                case 400...499:
-                                //MARK: the request was not valid 400-level...
-                                    print(data)
-                                    break
-                        
-                                default:
-                                //MARK: probably a 500-level error...
-                                    print(data)
-                                    break
-                        
-                            }
-                        }
-                        break
-                        
-                    case .failure(let error):
-                        //MARK: there was a network error...
-                        print(error)
-                        break
-                    }
-                })
-        }else{
-            //alert that the URL is invalid...
-        }
-    }
     
     @objc func onResetBarButtonTapped(){
         
@@ -95,9 +47,72 @@ class IngredientSelectionViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(displayRecipesViewController, animated: true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField)->Bool{
-        textField.resignFirstResponder()
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)->Bool{
+        let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
+        
+        getAutocompleteSuggestions(for: updatedText)
+        
         return true
+        
     }
     
-}
+    
+    
+    //MARK: add a new contact call: add endpoint...
+    func getAutocompleteSuggestions(for query: String){
+        let endpoint = "/food/ingredients/autocomplete"
+        if let url = URL(string: APIConfigs.baseURL + endpoint){
+            
+            AF.request(url, method:.get, parameters:
+                        [
+                            "query": query
+                        ])
+            .responseJSON{ response in
+                switch response.result {
+                case.success(let data):
+                    if let suggestions = self.parseAutocompleteResponse(data){
+                        self.autocompleteResults = suggestions
+                        self.ingredientSelectionView.tableViewSuggestions.reloadData()
+                    }
+                case .failure(let error):
+                    print("Autocomplete API request failed due to the following error: \(error)")
+                }
+            }
+        }
+    }
+    
+    func parseAutocompleteResponse(_ data: Any) -> [String]? {
+        return nil
+    }
+            
+            
+            
+            //MARK: Table Views aspects for loading search suggestions
+            
+            func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                let selectedIngredient = autocompleteResults[indexPath.row]
+                ingredientSelectionView.textFieldSearch.text = selectedIngredient
+                textFieldShouldReturn(ingredientSelectionView.textFieldSearch)
+            }
+            
+            
+            
+            func textFieldShouldReturn(_ textField: UITextField)->Bool{
+                textField.resignFirstResponder()
+                return true
+            }
+            
+            
+            func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                return autocompleteResults.count
+            }
+            
+            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "autocompleteCell", for: indexPath)
+                cell.textLabel?.text = autocompleteResults[indexPath.row]
+                return cell
+            }
+            
+            
+        }
+    
