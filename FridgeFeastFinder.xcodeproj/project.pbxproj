@@ -30,6 +30,9 @@
 		0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */; };
 		0F3D47D22B169615009E10A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47D12B169615009E10A7 /* ProfileViewController.swift */; };
 		0F3D47D42B169626009E10A7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47D32B169626009E10A7 /* ProfileView.swift */; };
+		0F3D47E02B1A7844009E10A7 /* FireBaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47DF2B1A7844009E10A7 /* FireBaseConstants.swift */; };
+		0F3D47E42B1A78D9009E10A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47E32B1A78D9009E10A7 /* User.swift */; };
+		0F3D47E92B1A8DCA009E10A7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3D47E82B1A8DCA009E10A7 /* SDWebImageSwiftUI */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -66,6 +69,8 @@
 		0F3D47CC2B166EB4009E10A7 /* FFFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFFTabBarController.swift; sourceTree = "<group>"; };
 		0F3D47D12B169615009E10A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0F3D47D32B169626009E10A7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0F3D47DF2B1A7844009E10A7 /* FireBaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseConstants.swift; sourceTree = "<group>"; };
+		0F3D47E32B1A78D9009E10A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 				0F3D47B22B150E18009E10A7 /* FirebaseDatabaseSwift in Frameworks */,
 				0F3D47B42B150E18009E10A7 /* FirebaseFirestore in Frameworks */,
 				0F3D47B02B150E18009E10A7 /* FirebaseDatabase in Frameworks */,
+				0F3D47E92B1A8DCA009E10A7 /* SDWebImageSwiftUI in Frameworks */,
 				0F3D47AE2B150E18009E10A7 /* FirebaseAuth in Frameworks */,
 				0F3D47B82B150E18009E10A7 /* FirebaseStorage in Frameworks */,
 				FE04201F97168801C12AC828 /* Pods_FridgeFeastFinder.framework in Frameworks */,
@@ -179,6 +185,14 @@
 			path = BookMarksScreen;
 			sourceTree = "<group>";
 		};
+		0F3D47DE2B1A7825009E10A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D47DF2B1A7844009E10A7 /* FireBaseConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0FC179812B067A5200A1397A = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +214,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47DE2B1A7825009E10A7 /* Utils */,
 				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 				8770BB832B198F19003CF939 /* Data Models */,
 				87E22F682B1850ED00425A63 /* RecipeInstructionsScreen */,
@@ -255,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				8770BB842B198F31003CF939 /* Ingredient.swift */,
+				0F3D47E32B1A78D9009E10A7 /* User.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 				0F3D47B32B150E18009E10A7 /* FirebaseFirestore */,
 				0F3D47B52B150E18009E10A7 /* FirebaseFirestoreSwift */,
 				0F3D47B72B150E18009E10A7 /* FirebaseStorage */,
+				0F3D47E82B1A8DCA009E10A7 /* SDWebImageSwiftUI */,
 			);
 			productName = FridgeFeastFinder;
 			productReference = 0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */;
@@ -333,6 +350,7 @@
 			mainGroup = 0FC179812B067A5200A1397A;
 			packageReferences = (
 				0F3D47AC2B150E18009E10A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0F3D47E72B1A8DCA009E10A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 0FC1798B2B067A5200A1397A /* Products */;
 			projectDirPath = "";
@@ -408,7 +426,9 @@
 				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
+				0F3D47E42B1A78D9009E10A7 /* User.swift in Sources */,
 				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
+				0F3D47E02B1A7844009E10A7 /* FireBaseConstants.swift in Sources */,
 				0F3D47C62B153448009E10A7 /* DashBoardViewController.swift in Sources */,
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
 				87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */,
@@ -663,6 +683,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		0F3D47E72B1A8DCA009E10A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +723,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F3D47AC2B150E18009E10A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		0F3D47E82B1A8DCA009E10A7 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F3D47E72B1A8DCA009E10A7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -73,9 +73,9 @@ extension CreateAccountViewController {
                 self.hideActivityIndicator()
                 
                 //MARK: pop the current controller...
-                let dashBoardViewController = DashBoardViewController()
-                dashBoardViewController.navigationItem.hidesBackButton = true
-                self.navigationController?.pushViewController(dashBoardViewController, animated: true)
+                let tabBarVC = FFFTabBarController()
+                tabBarVC.navigationItem.hidesBackButton = true;
+                self.navigationController?.pushViewController(tabBarVC, animated: true)
                 // self.navigationController?.popViewController(animated: true)
             }else{
                 //MARK: there was an error updating the profile...
