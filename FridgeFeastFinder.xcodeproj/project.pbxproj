@@ -315,7 +315,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0FC179892B067A5200A1397A = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -372,7 +372,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder-frameworks.sh\"\n";
+			shellScript = " \"${PODS_ROOT}/Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA797AB5B599A1F3D7D281BB /* [CP] Check Pods Manifest.lock */ = {
@@ -579,7 +579,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AA7289CZA7;
+				DEVELOPMENT_TEAM = GC4AV37V45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FridgeFeastFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -609,7 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AA7289CZA7;
+				DEVELOPMENT_TEAM = GC4AV37V45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FridgeFeastFinder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
