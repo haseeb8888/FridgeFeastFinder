@@ -19,8 +19,7 @@ class IngredientSelectionViewController: UIViewController, UITextFieldDelegate, 
         ingredientSelectionView.findRecipesButton.addTarget(self, action: #selector(onFindRecipesButtonTapped), for: .touchUpInside)
         // so that user input for ingredient is captured and we can delegate to the display recipes screen
         ingredientSelectionView.textFieldSearch.delegate = self
-        ingredientSelectionView.tableViewSuggestions.dataSource.self
-        ingredientSelectionView.tableViewSuggestions.delegate = self
+        
     }
     
     override func viewDidLoad() {
