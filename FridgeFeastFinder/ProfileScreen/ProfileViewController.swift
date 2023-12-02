@@ -18,6 +18,8 @@ class ProfileViewController: UIViewController {
     //MARK: variable to store the picked Image...
     var pickedImage:UIImage?
     
+    let childProgressView = ProgressSpinnerViewController()
+    
     override func loadView() {
         view = profileView
     }
@@ -25,6 +27,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "power"), style: .plain, target: self, action: #selector(onLogoutTapped))
+        self.showActivityIndicator()
         fetchUserDataAndUpdateProfile()
         profileView.buttonTakePhoto.menu = getMenuImagePicker()
         
@@ -71,11 +74,13 @@ class ProfileViewController: UIViewController {
                             self.pickedImage = image
                         }
                     }
+                    self.hideActivityIndicator()
                 }
             } else {
                 let email = Auth.auth().currentUser?.email
                 self.profileView.labelName.text = self.getPrefix(email: email ?? "test@gmail.com")
                 self.profileView.labelEmail.text = email
+                self.hideActivityIndicator()
             }
         }
     }

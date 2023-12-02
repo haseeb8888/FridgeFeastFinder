@@ -12,6 +12,8 @@ class SignInViewController: UIViewController {
 
     let signInView = SignInView()
     
+    let childProgressView = ProgressSpinnerViewController()
+    
     override func loadView() {
         view = signInView
     }
@@ -31,7 +33,7 @@ class SignInViewController: UIViewController {
             showAlert(message: "Please enter your password.")
             return
         }
-        
+        self.showActivityIndicator()
         signInToFireBase(email: email, password: password)
     }
     
@@ -42,6 +44,7 @@ class SignInViewController: UIViewController {
             if let error = error {
                 self.showAlert(message: error.localizedDescription)
             } else {
+                self.hideActivityIndicator()
                 let tabBarVC = FFFTabBarController()
                 tabBarVC.navigationItem.hidesBackButton = true
                 self.navigationController?.pushViewController(tabBarVC, animated: true)

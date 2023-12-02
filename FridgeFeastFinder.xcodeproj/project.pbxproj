@@ -32,6 +32,8 @@
 		0F3D47E42B1A78D9009E10A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47E32B1A78D9009E10A7 /* User.swift */; };
 		0F3D47E92B1A8DCA009E10A7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3D47E82B1A8DCA009E10A7 /* SDWebImageSwiftUI */; };
 		0F3D47F62B1BCF58009E10A7 /* FindByIngredientsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F52B1BCF58009E10A7 /* FindByIngredientsResponse.swift */; };
+		0F3D47F82B1BDE68009E10A7 /* ProfileProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F72B1BDE68009E10A7 /* ProfileProgressManager.swift */; };
+		0F3D47FA2B1BDF4B009E10A7 /* SignInProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F92B1BDF4B009E10A7 /* SignInProgressManager.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		0F3D47DF2B1A7844009E10A7 /* FireBaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseConstants.swift; sourceTree = "<group>"; };
 		0F3D47E32B1A78D9009E10A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0F3D47F52B1BCF58009E10A7 /* FindByIngredientsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIngredientsResponse.swift; sourceTree = "<group>"; };
+		0F3D47F72B1BDE68009E10A7 /* ProfileProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProgressManager.swift; sourceTree = "<group>"; };
+		0F3D47F92B1BDF4B009E10A7 /* SignInProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProgressManager.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			children = (
 				0F3D479E2B0D5004009E10A7 /* SignInView.swift */,
 				0F3D47A02B0D5070009E10A7 /* SignInViewController.swift */,
+				0F3D47F92B1BDF4B009E10A7 /* SignInProgressManager.swift */,
 			);
 			path = SignInScreen;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				0F3D47D12B169615009E10A7 /* ProfileViewController.swift */,
 				0F3D47D32B169626009E10A7 /* ProfileView.swift */,
+				0F3D47F72B1BDE68009E10A7 /* ProfileProgressManager.swift */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				0F3D47F62B1BCF58009E10A7 /* FindByIngredientsResponse.swift in Sources */,
 				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
+				0F3D47F82B1BDE68009E10A7 /* ProfileProgressManager.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
 				0F3D47E42B1A78D9009E10A7 /* User.swift in Sources */,
 				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
@@ -435,6 +442,7 @@
 				87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */,
 				870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */,
 				8785B3F72B1B858800E483CD /* IngredientSelectionTableViewCell.swift in Sources */,
+				0F3D47FA2B1BDF4B009E10A7 /* SignInProgressManager.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
