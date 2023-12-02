@@ -35,9 +35,14 @@ class IngredientSelectionView: UIView {
     
     func setupSearchRecipeButton(){
         searchRecipeButton = UIButton(type: .system)
-        searchRecipeButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        searchRecipeButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
         searchRecipeButton.setTitle("Search Recipe", for: .normal)
         searchRecipeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        searchRecipeButton.backgroundColor = UIColor(red: 0.0, green: 197.0/255.0, blue: 205.0/255.0, alpha:1.0)
+        searchRecipeButton.setTitleColor(.white, for: .normal)
+        searchRecipeButton.layer.cornerRadius = 8.0
+        
         self.addSubview(searchRecipeButton)
     }
     
