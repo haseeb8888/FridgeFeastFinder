@@ -29,14 +29,3 @@ func isValidPassword(_ password: String, confirmPassword: String) -> Bool {
 
     return true
 }
-
-func showErrorAlert(message: String?){
-    let alert = UIAlertController(
-        title: "Error!", message: message,
-        preferredStyle: .alert
-    )
-    
-    alert.addAction(UIAlertAction(title: "OK", style: .default))
-    
-    alert.present(alert, animated: true)
-}

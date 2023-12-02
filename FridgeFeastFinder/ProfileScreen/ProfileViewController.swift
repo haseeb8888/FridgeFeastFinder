@@ -91,7 +91,7 @@ class ProfileViewController: UIViewController {
                     // Call the function to reset the window's rootViewController
                     sceneDelegate.showMainApp()
                 }catch{
-                    showErrorAlert(message: error.localizedDescription)
+                    self.showErrorAlert(message: error.localizedDescription)
                     print("Error occured!")
                 }
             })
@@ -143,6 +143,17 @@ class ProfileViewController: UIViewController {
                 return email
             }
         }
+    
+    func showErrorAlert(message: String?){
+        let alert = UIAlertController(
+            title: "Error!", message: message,
+            preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        alert.present(alert, animated: true)
+    }
         
         
         func saveProfileImageToFirestore(image: UIImage) {
@@ -198,6 +209,7 @@ class ProfileViewController: UIViewController {
                 }
             }
         }
+    
         
         
         
