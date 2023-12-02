@@ -48,6 +48,8 @@ class IngredientSelectionViewController: UIViewController {
                 let newIngredient = Ingredient(ingredientName: ingredientName)
                 self?.ingredients.append(newIngredient)
                 self?.ingredientSelectionView.tableViewIngredients.reloadData()
+            } else {
+                self?.showEmptyTextFieldAlert()
             }
         }
         
@@ -56,6 +58,13 @@ class IngredientSelectionViewController: UIViewController {
         alert.addAction(saveAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showEmptyTextFieldAlert (){
+        let emptyTextFieldAlert = UIAlertController(title: "Error", message: "Please enter an ingredient name", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        emptyTextFieldAlert.addAction(okAction)
+        present(emptyTextFieldAlert, animated: true, completion: nil)
     }
 }
  
