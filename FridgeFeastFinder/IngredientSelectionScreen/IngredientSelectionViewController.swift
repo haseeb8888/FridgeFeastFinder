@@ -78,28 +78,8 @@ extension IngredientSelectionViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredients", for: indexPath) as! IngredientSelectionTableViewCell
         cell.ingredientName.text = ingredients[indexPath.row].ingredientName
-//        cell.deleteButton.tag = indexPath.row
-//        cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped( _:)), for: .touchUpInside)
         return cell
     }
-    
-//    @objc func deleteButtonTapped(_ sender: UIButton){
-//        let index = sender.tag
-//        
-//        let alert = UIAlertController(title: "Delete Ingredient", message: "Are you sure you want to delete this ingredient?", preferredStyle: .alert)
-//        
-//        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
-//            self?.ingredients.remove(at: index)
-//            self?.ingredientSelectionView.tableViewIngredients.reloadData()
-//        }
-//        
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        
-//        alert.addAction(yesAction)
-//        alert.addAction(cancelAction)
-//        
-//        present(alert, animated: true, completion: nil)
-//    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete"){
