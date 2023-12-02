@@ -8,16 +8,17 @@
 import UIKit
 
 class IngredientSelectionView: UIView {
-    
-    var textFieldSearch:UITextField!
-    var findRecipesButton: UIButton!
-    var tableViewSuggestions: UITableView!
+
+    var tableViewIngredients: UITableView!
+    var searchRecipeButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame:frame)
         self.backgroundColor = .systemBackground
-        setupTextFieldSearch()
-        setupFindRecipesButton()
+        
+        setupTableViewIngredients()
+        setupSearchRecipeButton()
+        
         initConstraints()
     }
     
@@ -25,25 +26,19 @@ class IngredientSelectionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
-    func setupTextFieldSearch(){
-        textFieldSearch = UITextField()
-        textFieldSearch.placeholder = "Search"
-        textFieldSearch.borderStyle = .roundedRect
-        textFieldSearch.keyboardType = .default
-        textFieldSearch.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldSearch)
+    func setupTableViewIngredients(){
+        tableViewIngredients = UITableView()
+        tableViewIngredients.register(IngredientSelectionTableViewCell.self, forCellReuseIdentifier: "ingredients")
+        tableViewIngredients.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(tableViewIngredients)
     }
     
-    func setupFindRecipesButton(){
-        findRecipesButton = UIButton(type: .system)
-        findRecipesButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        findRecipesButton.setTitle("Find Recipes", for: .normal)
-        findRecipesButton.setTitleColor(.white, for: .normal)
-        findRecipesButton.backgroundColor = .black
-        findRecipesButton.layer.cornerRadius = 8
-        findRecipesButton.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(findRecipesButton)
+    func setupSearchRecipeButton(){
+        searchRecipeButton = UIButton(type: .system)
+        searchRecipeButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        searchRecipeButton.setTitle("Search Recipe", for: .normal)
+        searchRecipeButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(searchRecipeButton)
     }
     
     func initConstraints(){
@@ -51,15 +46,15 @@ class IngredientSelectionView: UIView {
         let margins = self.layoutMarginsGuide
         NSLayoutConstraint.activate([
             
-            textFieldSearch.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
-            textFieldSearch.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
-            textFieldSearch.topAnchor.constraint(equalTo: margins.topAnchor, constant: 20),
-            textFieldSearch.heightAnchor.constraint(equalToConstant: 50),
+            tableViewIngredients.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
+            tableViewIngredients.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            tableViewIngredients.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            tableViewIngredients.bottomAnchor.constraint(equalTo: searchRecipeButton.topAnchor, constant: -8),
             
-            findRecipesButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
-            findRecipesButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
-            findRecipesButton.topAnchor.constraint(equalTo: textFieldSearch.bottomAnchor, constant: 40),
-            findRecipesButton.heightAnchor.constraint(equalToConstant: 50)
+            searchRecipeButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 8),
+            searchRecipeButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -8),
+            searchRecipeButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -8),
+            searchRecipeButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
 
