@@ -11,12 +11,14 @@ class IngredientSelectionTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
     var ingredientName: UILabel!
+    var deleteButton: UIButton!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupWrapperCellView()
         setupIngredientNameLabel()
+        setupDeleteButton()
         
         initConstraints()
     }
@@ -41,6 +43,13 @@ class IngredientSelectionTableViewCell: UITableViewCell {
         wrapperCellView.addSubview(ingredientName)
     }
     
+    func setupDeleteButton(){
+        deleteButton = UIButton(type: .system)
+        deleteButton.setTitle("Delete", for: .normal)
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(deleteButton)
+    }
+    
     func initConstraints(){
         NSLayoutConstraint.activate([
             wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 4),
@@ -51,6 +60,11 @@ class IngredientSelectionTableViewCell: UITableViewCell {
             ingredientName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
             ingredientName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
             ingredientName.heightAnchor.constraint(equalToConstant: 20),
+            
+            deleteButton.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
+            deleteButton.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -4),
+            deleteButton.widthAnchor.constraint(equalToConstant: 60),
+            deleteButton.heightAnchor.constraint(equalToConstant: 30),
             
             wrapperCellView.heightAnchor.constraint(equalToConstant: 36)
             

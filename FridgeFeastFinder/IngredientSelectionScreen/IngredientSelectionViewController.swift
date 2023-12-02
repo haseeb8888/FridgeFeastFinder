@@ -69,7 +69,15 @@ extension IngredientSelectionViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredients", for: indexPath) as! IngredientSelectionTableViewCell
         cell.ingredientName.text = ingredients[indexPath.row].ingredientName
+        cell.deleteButton.tag = indexPath.row
+        cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped( _:)), for: .touchUpInside)
         return cell
+    }
+    
+    @objc func deleteButtonTapped(_ sender: UIButton){
+        let index = sender.tag
+        ingredients.remove(at: index)
+        ingredientSelectionView.tableViewIngredients.reloadData()
     }
     
     //MARK: deal with user interaction with a cell...
