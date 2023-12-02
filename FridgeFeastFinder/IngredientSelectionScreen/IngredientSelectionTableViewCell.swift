@@ -10,11 +10,13 @@ import UIKit
 class IngredientSelectionTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
+    var ingredientName: UILabel!
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupWrapperCellView()
+        setupIngredientNameLabel()
         
         initConstraints()
     }
@@ -33,12 +35,22 @@ class IngredientSelectionTableViewCell: UITableViewCell {
         self.addSubview(wrapperCellView)
     }
     
+    func setupIngredientNameLabel(){
+        ingredientName = UILabel()
+        ingredientName.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(ingredientName)
+    }
+    
     func initConstraints(){
         NSLayoutConstraint.activate([
             wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor,constant: 4),
             wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            
+            ingredientName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
+            ingredientName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
+            ingredientName.heightAnchor.constraint(equalToConstant: 20),
             
             wrapperCellView.heightAnchor.constraint(equalToConstant: 36)
             
