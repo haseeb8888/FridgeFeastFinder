@@ -34,6 +34,10 @@
 		0F3D47F62B1BCF58009E10A7 /* FindByIngredientsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F52B1BCF58009E10A7 /* FindByIngredientsResponse.swift */; };
 		0F3D47F82B1BDE68009E10A7 /* ProfileProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F72B1BDE68009E10A7 /* ProfileProgressManager.swift */; };
 		0F3D47FA2B1BDF4B009E10A7 /* SignInProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47F92B1BDF4B009E10A7 /* SignInProgressManager.swift */; };
+		0F3D47FD2B1BF4B2009E10A7 /* UserRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47FC2B1BF4B2009E10A7 /* UserRecipesTableViewCell.swift */; };
+		0F3D47FF2B1BF6C4009E10A7 /* UserRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */; };
+		0F3D48012B1BF72B009E10A7 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48002B1BF72B009E10A7 /* PostEntity.swift */; };
+		0F3D48032B1BF851009E10A7 /* UserRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -74,6 +78,10 @@
 		0F3D47F52B1BCF58009E10A7 /* FindByIngredientsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByIngredientsResponse.swift; sourceTree = "<group>"; };
 		0F3D47F72B1BDE68009E10A7 /* ProfileProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProgressManager.swift; sourceTree = "<group>"; };
 		0F3D47F92B1BDF4B009E10A7 /* SignInProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProgressManager.swift; sourceTree = "<group>"; };
+		0F3D47FC2B1BF4B2009E10A7 /* UserRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesTableViewCell.swift; sourceTree = "<group>"; };
+		0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewController.swift; sourceTree = "<group>"; };
+		0F3D48002B1BF72B009E10A7 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeView.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +205,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		0F3D47FB2B1BF429009E10A7 /* Upload View Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D47FC2B1BF4B2009E10A7 /* UserRecipesTableViewCell.swift */,
+				0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */,
+				0F3D48002B1BF72B009E10A7 /* PostEntity.swift */,
+				0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */,
+			);
+			path = "Upload View Recipes";
+			sourceTree = "<group>";
+		};
 		0FC179812B067A5200A1397A = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +237,7 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0F3D47FB2B1BF429009E10A7 /* Upload View Recipes */,
 				0F3D47DE2B1A7825009E10A7 /* Utils */,
 				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 				8770BB832B198F19003CF939 /* Data Models */,
@@ -431,6 +451,7 @@
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
 				0F3D47F62B1BCF58009E10A7 /* FindByIngredientsResponse.swift in Sources */,
 				8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */,
+				0F3D48012B1BF72B009E10A7 /* PostEntity.swift in Sources */,
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47F82B1BDE68009E10A7 /* ProfileProgressManager.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
@@ -441,6 +462,7 @@
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
 				87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */,
 				870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */,
+				0F3D47FF2B1BF6C4009E10A7 /* UserRecipesViewController.swift in Sources */,
 				8785B3F72B1B858800E483CD /* IngredientSelectionTableViewCell.swift in Sources */,
 				0F3D47FA2B1BDF4B009E10A7 /* SignInProgressManager.swift in Sources */,
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
@@ -459,6 +481,8 @@
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
 				0F3D47C42B15342C009E10A7 /* DashBoardView.swift in Sources */,
 				0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */,
+				0F3D48032B1BF851009E10A7 /* UserRecipeView.swift in Sources */,
+				0F3D47FD2B1BF4B2009E10A7 /* UserRecipesTableViewCell.swift in Sources */,
 				0F3D479F2B0D5004009E10A7 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

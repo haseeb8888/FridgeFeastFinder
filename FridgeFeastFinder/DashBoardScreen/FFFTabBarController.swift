@@ -15,7 +15,7 @@ class FFFTabBarController: UITabBarController {
         super.viewDidLoad()
         UITabBar.appearance().tintColor = .black
         UITabBar.appearance().backgroundColor = .systemBackground
-        viewControllers = [createRecipesNC(), createBookmarksNC(), createProfileNC()]
+        viewControllers = [createRecipesNC(), createBookmarksNC(), createUserRecipes(), createProfileNC()]
         
         // Trigger the function in BookmarksVC when the app starts
 //        if let bookmarksNavVC = viewControllers?[2] as? UINavigationController,
@@ -47,8 +47,16 @@ class FFFTabBarController: UITabBarController {
             viewController = ProfileViewController()
 
         viewController.title = "View Profile"
-        viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 2)
+        viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 3)
 
         return UINavigationController(rootViewController: viewController)
+    }
+    
+    func createUserRecipes() -> UINavigationController  {
+        let userRecipesVC = UserRecipesViewController()
+        userRecipesVC.title = "User Recipes"
+        userRecipesVC.tabBarItem = UITabBarItem(title: "User Recipes", image: UIImage(systemName: "fork.knife.circle"), tag: 2)
+        
+        return UINavigationController(rootViewController: userRecipesVC)
     }
 }
