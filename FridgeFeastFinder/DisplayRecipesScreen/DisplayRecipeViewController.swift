@@ -53,6 +53,9 @@ extension DisplayRecipesViewController: UITableViewDelegate, UITableViewDataSour
     //MARK: deal with user interaction with a cell...
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(self.dataArray[indexPath.row])
+        let recipeDetailVC = RecipeInstructionsViewController()
+            recipeDetailVC.recipe = dataArray[indexPath.row]
+        navigationController?.pushViewController(recipeDetailVC, animated: true)
     }
     
     

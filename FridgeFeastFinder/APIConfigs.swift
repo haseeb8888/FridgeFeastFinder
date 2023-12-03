@@ -13,4 +13,6 @@ class APIConfigs{
     static let apiKey = "472adf5246214b198b95112bb8a62e39"
     
     static var findByIngredients = "/recipes/findByIngredients"
+    
+    static var recipeProcedure = "/recipes/extract"
 }
