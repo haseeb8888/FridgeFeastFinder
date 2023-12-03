@@ -34,6 +34,11 @@ class IngredientSelectionViewController: UIViewController {
     }
     
     @objc func onSearchRecipeButtonTapped(){
+        if (self.ingredients.isEmpty) {
+            showAlert(message: "Add atleast one ingredient to display Recipes.")
+            return
+        }
+        getRecipes(ingredients: self.ingredients)
         
     }
     
@@ -63,6 +68,13 @@ class IngredientSelectionViewController: UIViewController {
         alert.addAction(saveAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func showEmptyTextFieldAlert (){

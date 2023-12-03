@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class RecipesTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
@@ -21,7 +19,7 @@ class RecipesTableViewCell: UITableViewCell {
         
         setupWrapperCellView()
         setupRecipeNameLabel()
-        setupIngredientList()
+        // setupIngredientList()
         setupRecipeImage()
         
         initConstraints()
@@ -32,15 +30,16 @@ class RecipesTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupWrapperCellView(){
+    func setupWrapperCellView() {
+        wrapperCellView = UIView()
         wrapperCellView.backgroundColor = .white
-        wrapperCellView.layer.cornerRadius = 6.0
+        wrapperCellView.layer.cornerRadius = 4.0
         wrapperCellView.layer.shadowColor = UIColor.gray.cgColor
         wrapperCellView.layer.shadowOffset = .zero
-        wrapperCellView.layer.shadowRadius = 4.0
-        wrapperCellView.layer.shadowOpacity = 0.4
+        wrapperCellView.layer.shadowRadius = 2.0
+        wrapperCellView.layer.shadowOpacity = 0.7
         wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(wrapperCellView)
+        addSubview(wrapperCellView)
     }
     
     func setupRecipeNameLabel(){
@@ -56,29 +55,29 @@ class RecipesTableViewCell: UITableViewCell {
     }
     
     func setupRecipeImage(){
-        
+        recipeImage = UIImageView()
+        recipeImage.contentMode = .scaleAspectFill
+        recipeImage.clipsToBounds = true
+        recipeImage.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(recipeImage)
     }
     
-    func initConstraints(){
+    func initConstraints() {
         NSLayoutConstraint.activate([
             wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
             wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
             
+            recipeImage.topAnchor.constraint(equalTo: wrapperCellView.topAnchor),
+            recipeImage.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor),
+            recipeImage.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor),
+            recipeImage.heightAnchor.constraint(equalTo: wrapperCellView.widthAnchor, multiplier: 0.6), // Adjust the multiplier as needed
             
+            recipeName.topAnchor.constraint(equalTo: recipeImage.bottomAnchor, constant: 8),
+            recipeName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+            recipeName.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
+            recipeName.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8)
         ])
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

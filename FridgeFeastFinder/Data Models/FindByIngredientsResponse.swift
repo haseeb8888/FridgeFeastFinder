@@ -23,3 +23,11 @@ class FindByIngredientsResponse: Codable {
     
     
 }
+
+class Recipes: Codable {
+    let recipes: [FindByIngredientsResponse]
+    
+    init(recipes: [FindByIngredientsResponse]) {
+        self.recipes = recipes
+    }
+}

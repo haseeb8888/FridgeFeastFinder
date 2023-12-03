@@ -20,6 +20,7 @@ class UserRecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "User Recipes"
+        userRecipesView.tableViewUserRecipes.separatorStyle = .none
         userRecipesView.tableViewUserRecipes.dataSource = self
         userRecipesView.tableViewUserRecipes.delegate = self
         var newArray = [PostEntity]()

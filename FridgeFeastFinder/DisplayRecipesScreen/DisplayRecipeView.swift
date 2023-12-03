@@ -18,7 +18,6 @@ class DisplayRecipesView: UIView {
         
         //MARK: initializing a TableView...
         setupTableViewContacts()
-        setupBackButton()
         initConstraints()
     }
     
@@ -29,30 +28,13 @@ class DisplayRecipesView: UIView {
         self.addSubview(tableViewRecipes)
     }
     
-    func setupBackButton() {
-        backButton = UIButton(type: .system)
-        backButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        backButton.setTitle("Back", for: .normal)
-        backButton.setTitleColor(.white, for: .normal)
-        backButton.backgroundColor = .black
-        backButton.layer.cornerRadius = 8
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(backButton)
-    }
-    
-    
     //MARK: setting the constraints...
     func initConstraints(){
         NSLayoutConstraint.activate([
-            tableViewRecipes.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 8),
-            tableViewRecipes.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8),
-            tableViewRecipes.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            tableViewRecipes.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            
-            backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            backButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            backButton.topAnchor.constraint(equalTo: tableViewRecipes.bottomAnchor, constant: 40),
-            backButton.heightAnchor.constraint(equalToConstant: 50),
+            tableViewRecipes.topAnchor.constraint(equalTo: self.topAnchor),
+            tableViewRecipes.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            tableViewRecipes.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tableViewRecipes.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     

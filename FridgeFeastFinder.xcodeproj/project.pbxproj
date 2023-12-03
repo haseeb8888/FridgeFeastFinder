@@ -40,6 +40,7 @@
 		0F3D48032B1BF851009E10A7 /* UserRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */; };
 		0F3D48052B1C1726009E10A7 /* UserRecipeUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48042B1C1726009E10A7 /* UserRecipeUploadView.swift */; };
 		0F3D48072B1C18F4009E10A7 /* UserRecipeUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48062B1C18F4009E10A7 /* UserRecipeUploadViewController.swift */; };
+		0F3D48092B1CF880009E10A7 /* IngredientSelectionAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48082B1CF880009E10A7 /* IngredientSelectionAPICall.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -86,6 +87,7 @@
 		0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeView.swift; sourceTree = "<group>"; };
 		0F3D48042B1C1726009E10A7 /* UserRecipeUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeUploadView.swift; sourceTree = "<group>"; };
 		0F3D48062B1C18F4009E10A7 /* UserRecipeUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeUploadViewController.swift; sourceTree = "<group>"; };
+		0F3D48082B1CF880009E10A7 /* IngredientSelectionAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSelectionAPICall.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				870954A42B1592D50090E9B8 /* IngredientSelectionViewController.swift */,
 				870954A62B1592EE0090E9B8 /* IngredientSelectionView.swift */,
 				8785B3F62B1B858800E483CD /* IngredientSelectionTableViewCell.swift */,
+				0F3D48082B1CF880009E10A7 /* IngredientSelectionAPICall.swift */,
 			);
 			path = IngredientSelectionScreen;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */,
 				87E22F6C2B18512200425A63 /* RecipeInstructionsViewController.swift in Sources */,
 				870954A72B1592EE0090E9B8 /* IngredientSelectionView.swift in Sources */,
+				0F3D48092B1CF880009E10A7 /* IngredientSelectionAPICall.swift in Sources */,
 				0F3D47FF2B1BF6C4009E10A7 /* UserRecipesViewController.swift in Sources */,
 				8785B3F72B1B858800E483CD /* IngredientSelectionTableViewCell.swift in Sources */,
 				0F3D47FA2B1BDF4B009E10A7 /* SignInProgressManager.swift in Sources */,
