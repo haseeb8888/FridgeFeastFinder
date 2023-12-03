@@ -10,18 +10,18 @@ import FirebaseAuth
 
 class FFFTabBarController: UITabBarController {
     let isLoggedIn = Auth.auth().currentUser != nil
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().tintColor = .black
         UITabBar.appearance().backgroundColor = .systemBackground
-        viewControllers = [createRecipesNC(), createBookmarksNC(), createUserRecipes(), createProfileNC()]
+        viewControllers = [createRecipesNC(), createBookmarksNC(),createUserUploadRecipes(), createUserRecipes(), createProfileNC()]
         
         // Trigger the function in BookmarksVC when the app starts
-//        if let bookmarksNavVC = viewControllers?[2] as? UINavigationController,
-//           let bookmarksVC = bookmarksNavVC.viewControllers.first as? BookmarksVC {
-//            bookmarksVC.fetchBookmarkedRecipeIDs()
-//        }
+        //        if let bookmarksNavVC = viewControllers?[2] as? UINavigationController,
+        //           let bookmarksVC = bookmarksNavVC.viewControllers.first as? BookmarksVC {
+        //            bookmarksVC.fetchBookmarkedRecipeIDs()
+        //        }
     }
     
     
@@ -33,7 +33,7 @@ class FFFTabBarController: UITabBarController {
         return UINavigationController(rootViewController: homeVC)
     }
     
- 
+    
     func createRecipesNC() -> UINavigationController  {
         let recipesVC = IngredientSelectionViewController()
         recipesVC.title = "MY FRIDGE"
@@ -44,11 +44,11 @@ class FFFTabBarController: UITabBarController {
     
     func createProfileNC() -> UINavigationController  {
         let viewController: UIViewController
-            viewController = ProfileViewController()
-
+        viewController = ProfileViewController()
+        
         viewController.title = "View Profile"
         viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 3)
-
+        
         return UINavigationController(rootViewController: viewController)
     }
     
@@ -58,5 +58,13 @@ class FFFTabBarController: UITabBarController {
         userRecipesVC.tabBarItem = UITabBarItem(title: "User Recipes", image: UIImage(systemName: "fork.knife.circle"), tag: 2)
         
         return UINavigationController(rootViewController: userRecipesVC)
+    }
+    
+    func createUserUploadRecipes() -> UINavigationController  {
+        let userUploadRecipesVC = UserRecipeUploadViewController()
+        userUploadRecipesVC.title = "Share Recipe"
+        userUploadRecipesVC.tabBarItem = UITabBarItem(title: "Share Recipe", image: UIImage(systemName: "square.and.arrow.up"), tag: 4)
+        
+        return UINavigationController(rootViewController: userUploadRecipesVC)
     }
 }

@@ -38,6 +38,8 @@
 		0F3D47FF2B1BF6C4009E10A7 /* UserRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */; };
 		0F3D48012B1BF72B009E10A7 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48002B1BF72B009E10A7 /* PostEntity.swift */; };
 		0F3D48032B1BF851009E10A7 /* UserRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */; };
+		0F3D48052B1C1726009E10A7 /* UserRecipeUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48042B1C1726009E10A7 /* UserRecipeUploadView.swift */; };
+		0F3D48072B1C18F4009E10A7 /* UserRecipeUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D48062B1C18F4009E10A7 /* UserRecipeUploadViewController.swift */; };
 		0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798D2B067A5200A1397A /* AppDelegate.swift */; };
 		0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1798F2B067A5200A1397A /* SceneDelegate.swift */; };
 		0FC179922B067A5200A1397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC179912B067A5200A1397A /* ViewController.swift */; };
@@ -82,6 +84,8 @@
 		0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewController.swift; sourceTree = "<group>"; };
 		0F3D48002B1BF72B009E10A7 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
 		0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeView.swift; sourceTree = "<group>"; };
+		0F3D48042B1C1726009E10A7 /* UserRecipeUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeUploadView.swift; sourceTree = "<group>"; };
+		0F3D48062B1C18F4009E10A7 /* UserRecipeUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeUploadViewController.swift; sourceTree = "<group>"; };
 		0FC1798A2B067A5200A1397A /* FridgeFeastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeFeastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC1798D2B067A5200A1397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC1798F2B067A5200A1397A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 				0F3D47FE2B1BF6C4009E10A7 /* UserRecipesViewController.swift */,
 				0F3D48002B1BF72B009E10A7 /* PostEntity.swift */,
 				0F3D48022B1BF851009E10A7 /* UserRecipeView.swift */,
+				0F3D48042B1C1726009E10A7 /* UserRecipeUploadView.swift */,
+				0F3D48062B1C18F4009E10A7 /* UserRecipeUploadViewController.swift */,
 			);
 			path = "Upload View Recipes";
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				0F3D47C92B153867009E10A7 /* Validations.swift in Sources */,
 				0F3D47A12B0D5070009E10A7 /* SignInViewController.swift in Sources */,
 				870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */,
+				0F3D48072B1C18F4009E10A7 /* UserRecipeUploadViewController.swift in Sources */,
 				87E22F6A2B18510C00425A63 /* RecipeInstructionsView.swift in Sources */,
 				0F3D47A32B0D5852009E10A7 /* CreateAccountView.swift in Sources */,
 				0F3D47BD2B15117A009E10A7 /* ProgressSpinnerDelegate.swift in Sources */,
@@ -479,6 +486,7 @@
 				0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */,
 				0F3D47C12B152307009E10A7 /* CreateProgressIndicatorManager.swift in Sources */,
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
+				0F3D48052B1C1726009E10A7 /* UserRecipeUploadView.swift in Sources */,
 				0F3D47C42B15342C009E10A7 /* DashBoardView.swift in Sources */,
 				0FC179902B067A5200A1397A /* SceneDelegate.swift in Sources */,
 				0F3D48032B1BF851009E10A7 /* UserRecipeView.swift in Sources */,
