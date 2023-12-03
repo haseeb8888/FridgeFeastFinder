@@ -24,9 +24,11 @@ class UserRecipeUploadView: UIView {
     }
     
     func setupImageView() {
-        imageView = UIButton()
+        imageView = UIButton(type: .system)
+        imageView.setTitle("", for: .normal)
         imageView.setImage(UIImage(systemName: "camera"), for: .normal)
         imageView.tintColor = .black
+        imageView.showsMenuAsPrimaryAction = true
         imageView.contentHorizontalAlignment = .fill
         imageView.contentVerticalAlignment = .fill
         imageView.imageView?.contentMode = .scaleAspectFit

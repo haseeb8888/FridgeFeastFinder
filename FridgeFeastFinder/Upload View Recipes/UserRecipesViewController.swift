@@ -32,7 +32,7 @@ class UserRecipesViewController: UIViewController {
     
     func getDataFireBase() {
         let fireStoreDb = Firestore.firestore()
-        fireStoreDb.collection("Post").order(by: "date", descending: true)
+        fireStoreDb.collection("Post")
             .addSnapshotListener { snapshot, error in
                 if error != nil {
                     // Handle the error
