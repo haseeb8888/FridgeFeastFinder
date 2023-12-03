@@ -28,12 +28,31 @@ class UserRecipeUploadViewController: UIViewController {
         userRecipeUploadView.imageView.menu = getMenuImagePicker()
     }
     
-    @objc func onUploadButtonTapped(){
-        let comment = userRecipeUploadView.commentTextField.text?.description
-        
-        if let pickedImage = self.pickedImage {
-            self.saveRecipeToFirestore(image: pickedImage)
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+
+            // Reset the image and text field to default values
+            userRecipeUploadView.imageView.setImage(UIImage(systemName: "camera"), for: .normal)
+            userRecipeUploadView.commentTextField.text = ""
+
+            // Ensure pickedImage is nil or set it to your default image if needed
+            pickedImage = UIImage(systemName: "camera")
         }
+    
+    @objc func onUploadButtonTapped(){
+        guard let pickedImage = self.pickedImage else {
+                // Show a warning because the image is empty
+                showAlert(message: "Please select an image.")
+                return
+            }
+
+            guard let comment = userRecipeUploadView.commentTextField.text, !comment.isEmpty else {
+                // Show a warning because the comment is empty
+                showAlert(message: "Please enter a comment.")
+                return
+            }
+        
+        saveRecipeToFirestore(image: pickedImage)
         
     }
     
@@ -86,11 +105,10 @@ class UserRecipeUploadViewController: UIViewController {
                         print("Error saving recipe data to Firestore: \(error.localizedDescription)")
                     } else {
                         print("recipe data saved successfully!")
-                        let userRecipesVC = UserRecipesViewController()
                         
                         // Access the tab bar controller and set the selected index to the desired tab
                         if let tabBarController = self.tabBarController {
-                            tabBarController.selectedIndex = 2 // Set the index of the "User Recipes" tab
+                            tabBarController.selectedIndex = 3 // Set the index of the "User Recipes" tab
                         }
                     }
                 }
@@ -111,15 +129,11 @@ class UserRecipeUploadViewController: UIViewController {
         return UIMenu(title: "Select source", children: menuItems)
     }
     
-    func showErrorAlert(message: String?){
-        let alert = UIAlertController(
-            title: "Error!", message: message,
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        
-        alert.present(alert, animated: true)
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     //MARK: take Photo using Camera...
