@@ -11,6 +11,7 @@ class IngredientSelectionView: UIView {
 
     var tableViewIngredients: UITableView!
     var searchRecipeButton: UIButton!
+    var welcomeLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -18,6 +19,7 @@ class IngredientSelectionView: UIView {
         
         setupTableViewIngredients()
         setupSearchRecipeButton()
+        setupWelcomeLabel()
         
         initConstraints()
     }
@@ -46,13 +48,27 @@ class IngredientSelectionView: UIView {
         self.addSubview(searchRecipeButton)
     }
     
+    func setupWelcomeLabel(){
+        welcomeLabel = UILabel()
+        welcomeLabel.text = "Add your ingredients here. Swipe left to delete."
+        welcomeLabel.font = .boldSystemFont(ofSize: 16)
+        welcomeLabel.textColor = .black
+        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(welcomeLabel)
+
+    }
     
     func initConstraints(){
         
         let margins = self.layoutMarginsGuide
         NSLayoutConstraint.activate([
             
-            tableViewIngredients.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
+            welcomeLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
+            welcomeLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            welcomeLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            
+            
+            tableViewIngredients.topAnchor.constraint(equalTo: welcomeLabel.safeAreaLayoutGuide.topAnchor, constant: 32),
             tableViewIngredients.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
             tableViewIngredients.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
             tableViewIngredients.bottomAnchor.constraint(equalTo: searchRecipeButton.topAnchor, constant: -8),
@@ -65,3 +81,4 @@ class IngredientSelectionView: UIView {
     }
 
 }
+
