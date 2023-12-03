@@ -18,6 +18,7 @@ class IngredientSelectionViewController: UIViewController {
     
     override func loadView() {
         view = ingredientSelectionView
+        ingredientSelectionView.searchRecipeButton.addTarget(self, action: #selector(onSearchRecipeButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -30,6 +31,10 @@ class IngredientSelectionViewController: UIViewController {
         
         ingredientSelectionView.tableViewIngredients.dataSource = self
         ingredientSelectionView.tableViewIngredients.delegate = self
+    }
+    
+    @objc func onSearchRecipeButtonTapped(){
+        
     }
     
     @objc func onPlusButtonTapped(){

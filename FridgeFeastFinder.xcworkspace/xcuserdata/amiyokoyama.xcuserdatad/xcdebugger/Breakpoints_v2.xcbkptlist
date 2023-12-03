@@ -14,10 +14,10 @@
             filePath = "FridgeFeastFinder/IngredientSelectionScreen/IngredientSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "IngredientSelectionViewController"
-            landmarkType = "3">
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "showAddIngredientAlert()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
