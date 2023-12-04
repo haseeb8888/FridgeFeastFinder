@@ -42,7 +42,7 @@ extension RecipeInstructionsViewController {
                                         
                                         // Join the paragraphs back with line breaks
                                         let paragraphs = recipe.instructions.components(separatedBy: ".")
-                                        let stringWithLineBreaks = paragraphs.joined(separator: "\n\n")
+                                        let stringWithLineBreaks = paragraphs.joined(separator: ".\n\n")
                                         self.recipeInstructionsScreen.imageView.sd_setImage(with: URL(string: recipe.image))
                                         self.recipeInstructionsScreen.titleLabel.text = recipe.title
                                         self.recipeInstructionsScreen.sourceButton.setTitle(recipe.sourceName, for: .normal)

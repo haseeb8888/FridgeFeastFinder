@@ -41,11 +41,16 @@ extension IngredientSelectionViewController {
                                     do {
                                         let receivedData = try decoder.decode([FindByIngredientsResponse].self, from: data)
                                         let recipes = Recipes(recipes: receivedData)
+                                        if recipes.recipes.isEmpty {
+                                            self.showAlert(message: "No recipes found :(, please search with valid ingredient names.")
+                                            return
+                                        }
                                         let displayRecipeVC = DisplayRecipesViewController()
                                         displayRecipeVC.setRecipesToDisplay(recipes: recipes)
                                         self.navigationController?.pushViewController(displayRecipeVC, animated: true)
                                         // Handle the received data as needed
                                     } catch {
+                                        self.showAlert(message: "something went wrong!")
                                         print(error.localizedDescription)
                                         print("JSON could not be decoded!")
                                     }

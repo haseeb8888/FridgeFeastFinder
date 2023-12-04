@@ -29,6 +29,7 @@ class IngredientSelectionViewController: UIViewController {
             barButtonSystemItem: .add, target: self, action: #selector(onPlusButtonTapped)
         )
         
+        ingredientSelectionView.tableViewIngredients.separatorStyle = .none
         ingredientSelectionView.tableViewIngredients.dataSource = self
         ingredientSelectionView.tableViewIngredients.delegate = self
     }
