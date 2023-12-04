@@ -12,6 +12,7 @@ class DisplayRecipesViewController: UIViewController {
     let displayRecipesScreen = DisplayRecipesView()
     var searchText: String?
     var dataArray = [FindByIngredientsResponse]()
+    let childProgressView = ProgressSpinnerViewController()
 
     
     override func loadView() {
@@ -53,10 +54,27 @@ extension DisplayRecipesViewController: UITableViewDelegate, UITableViewDataSour
     //MARK: deal with user interaction with a cell...
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(self.dataArray[indexPath.row])
+        self.showActivityIndicator()
         let recipeDetailVC = RecipeInstructionsViewController()
-            recipeDetailVC.recipe = dataArray[indexPath.row]
+        recipeDetailVC.id = dataArray[indexPath.row].id
         navigationController?.pushViewController(recipeDetailVC, animated: true)
+        self.hideActivityIndicator()
     }
     
     
 }
+
+extension DisplayRecipesViewController: ProgressSpinnerDelegate {
+    func showActivityIndicator(){
+        addChild(childProgressView)
+        view.addSubview(childProgressView.view)
+        childProgressView.didMove(toParent: self)
+    }
+    
+    func hideActivityIndicator(){
+        childProgressView.willMove(toParent: nil)
+        childProgressView.view.removeFromSuperview()
+        childProgressView.removeFromParent()
+    }
+}
+

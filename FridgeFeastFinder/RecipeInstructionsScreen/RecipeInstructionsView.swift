@@ -9,38 +9,27 @@ import UIKit
 
 class RecipeInstructionsView: UIView {
     
-    // when a cell is tapped in the table on the  display recipes screen, we navigate to this page with the instructions for the recipe.
-
-    var backButton: UIButton!
     var titleLabel: UILabel!
     var imageView: UIImageView!
-    
-    
+    var sourceButton: UIButton!
+    var scrollView: UIScrollView!
+    var instructionsLabel: UILabel!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
-        
-        //MARK: initializing a TableView...
-        setupBackButton()
+
         setupTitleLabel()
         setupImageView()
+        setupSourceButton()
+        setupScrollView()
+        setupInstructionsLabel()
         initConstraints()
     }
     
-    func setupBackButton() {
-        backButton = UIButton(type: .system)
-        backButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        backButton.setTitle("Back", for: .normal)
-        backButton.setTitleColor(.white, for: .normal)
-        backButton.backgroundColor = .black
-        backButton.layer.cornerRadius = 8
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(backButton)
-    }
-    
-    func setupTitleLabel(){
+    func setupTitleLabel() {
         titleLabel = UILabel()
-        titleLabel.font = .boldSystemFont(ofSize: 24)
+        titleLabel.font = .boldSystemFont(ofSize: 28)
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
@@ -50,31 +39,63 @@ class RecipeInstructionsView: UIView {
     
     func setupImageView() {
         imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
     }
     
-    func initConstraints(){
+    func setupSourceButton() {
+        sourceButton = UIButton(type: .system)
+        sourceButton.titleLabel?.font = .italicSystemFont(ofSize: 18)
+        sourceButton.setTitleColor(.blue, for: .normal)
+        sourceButton.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sourceButton)
+    }
+    
+    func setupScrollView() {
+        scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(scrollView)
+    }
+    
+    func setupInstructionsLabel() {
+        instructionsLabel = UILabel()
+        instructionsLabel.font = .systemFont(ofSize: 16)
+        instructionsLabel.numberOfLines = 0
+        instructionsLabel.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(instructionsLabel)
+    }
+
+    func initConstraints() {
         NSLayoutConstraint.activate([
-            backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            backButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            backButton.heightAnchor.constraint(equalToConstant: 50),
-            
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            titleLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 20),
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            imageView.heightAnchor.constraint(equalToConstant: 200),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
+            
+            sourceButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            sourceButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            sourceButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            scrollView.topAnchor.constraint(equalTo: sourceButton.bottomAnchor, constant: 10),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            
+            instructionsLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            instructionsLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            instructionsLabel.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            instructionsLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor),  // Make it horizontal
+            instructionsLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
         ])
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
