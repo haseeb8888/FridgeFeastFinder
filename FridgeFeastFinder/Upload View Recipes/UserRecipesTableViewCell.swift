@@ -13,6 +13,8 @@ class UserRecipesTableViewCell: UITableViewCell {
     var postImageView: UIImageView!
     var commentText: UILabel!
     var emailText: UILabel!
+    var likeButton: UIButton!
+    var likesCountLabel: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,6 +27,8 @@ class UserRecipesTableViewCell: UITableViewCell {
         setupPostImageView()
         setupCommentTextLabel()
         setupEmailTextLabel()
+        setupLikeButton()
+        setupLikesCountLabel()
         initConstraints()
     }
     
@@ -63,6 +67,22 @@ class UserRecipesTableViewCell: UITableViewCell {
         wrapperCellView.addSubview(emailText)
     }
     
+    func setupLikeButton() {
+        likeButton = UIButton()
+        likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        likeButton.tintColor = .red
+        likeButton.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(likeButton)
+    }
+    
+    func setupLikesCountLabel() {
+        likesCountLabel = UILabel()
+        likesCountLabel.font = UIFont.systemFont(ofSize: 14)
+        likesCountLabel.textColor = .black
+        likesCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(likesCountLabel)
+    }
+    
     func initConstraints() {
         NSLayoutConstraint.activate([
             wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
@@ -79,10 +99,19 @@ class UserRecipesTableViewCell: UITableViewCell {
             commentText.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
             commentText.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
             
-            emailText.topAnchor.constraint(equalTo: commentText.bottomAnchor, constant: 8),
+            likesCountLabel.topAnchor.constraint(equalTo: commentText.bottomAnchor, constant: 8),
+            likesCountLabel.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+            likesCountLabel.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
+            
+            emailText.topAnchor.constraint(equalTo: likesCountLabel.bottomAnchor, constant: 8),
             emailText.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
             emailText.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
-            emailText.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8)
+            emailText.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8),
+            
+            likeButton.topAnchor.constraint(equalTo: emailText.topAnchor),
+            likeButton.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
+            likeButton.heightAnchor.constraint(equalToConstant: 20),
+            likeButton.widthAnchor.constraint(equalToConstant: 20),
         ])
     }
     

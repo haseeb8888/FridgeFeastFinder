@@ -16,6 +16,8 @@ class UserRecipeUploadViewController: UIViewController {
     
     let userRecipeUploadView = UserRecipeUploadView()
     
+    let childProgressView = ProgressSpinnerViewController()
+    
     var pickedImage:UIImage?
     
     override func loadView() {
@@ -52,6 +54,7 @@ class UserRecipeUploadViewController: UIViewController {
                 return
             }
         
+        self.showActivityIndicator()
         saveRecipeToFirestore(image: pickedImage)
         
     }
@@ -105,6 +108,7 @@ class UserRecipeUploadViewController: UIViewController {
                         print("Error saving recipe data to Firestore: \(error.localizedDescription)")
                     } else {
                         print("recipe data saved successfully!")
+                        self.hideActivityIndicator()
                         
                         // Access the tab bar controller and set the selected index to the desired tab
                         if let tabBarController = self.tabBarController {

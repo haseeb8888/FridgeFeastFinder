@@ -24,7 +24,7 @@ class UserRecipesViewController: UIViewController {
         userRecipesView.tableViewUserRecipes.dataSource = self
         userRecipesView.tableViewUserRecipes.delegate = self
         var newArray = [PostEntity]()
-        let postEntity = PostEntity(email: "", comment: "", imageUrl: "https://uploads.dailydot.com/e52/31/87610fa1a0ae891d.png?auto=compress&fm=png")
+        let postEntity = PostEntity(email: "", comment: "", imageUrl: "https://uploads.dailydot.com/e52/31/87610fa1a0ae891d.png?auto=compress&fm=png", likes: 0, isLiked: false,postId: "null")
         newArray.append(postEntity)
         self.postArray = newArray
         getDataFireBase()
@@ -48,7 +48,7 @@ class UserRecipesViewController: UIViewController {
                                 let email = doc.get("email") as? String,
                                 let comment = doc.get("comment") as? String
                             {
-                                let postEntity = PostEntity(email: email, comment: comment, imageUrl: imageUrl)
+                                let postEntity = PostEntity(email: email, comment: comment, imageUrl: imageUrl, likes: 0, isLiked: false,postId: "null")
                                 newArray.append(postEntity)
                             }
                         }
@@ -57,7 +57,7 @@ class UserRecipesViewController: UIViewController {
                         self.userRecipesView.tableViewUserRecipes.reloadData()
                     } else {
                         var newArray = [PostEntity]()
-                        let postEntity = PostEntity(email: "", comment: "", imageUrl: "https://uploads.dailydot.com/e52/31/87610fa1a0ae891d.png?auto=compress&fm=png")
+                        let postEntity = PostEntity(email: "", comment: "", imageUrl: "https://uploads.dailydot.com/e52/31/87610fa1a0ae891d.png?auto=compress&fm=png", likes: 0, isLiked: false,postId: "null")
                         newArray.append(postEntity)
                         self.postArray = newArray
                         print("Empty")
