@@ -37,7 +37,7 @@ extension RecipeInstructionsViewController {
                                         let receivedData = try decoder.decode(RecipeInstructionResponse.self, from: data)
                                         
                                         let recipe  = RecipeInstructionResponse(id: receivedData.id, title: receivedData.title, image: receivedData.image, servings: receivedData.servings, sourceName: receivedData.sourceName, sourceUrl: receivedData.sourceUrl, instructions: receivedData.instructions)
-
+                                        
                                         self.recipe = recipe
                                         
                                         // Join the paragraphs back with line breaks
@@ -52,19 +52,19 @@ extension RecipeInstructionsViewController {
                                         // Handle the received data as needed
                                     } catch {
                                         print(error.localizedDescription)
-                                        self.showAlert(message: "something went wrong!")
+                                        self.showAlert(title: "Error" ,message: "something went wrong!")
                                         print("JSON could not be decoded!")
                                     }
                                     break
                                     
                                 case 400...499:
-                                    self.showAlert(message: "something went wrong!")
+                                    self.showAlert(title: "Error", message: "something went wrong!")
                                     print(data)
                                     // Handle client errors
                                     break
                                     
                                 default:
-                                    self.showAlert(message: "something went wrong!")
+                                    self.showAlert(title: "Error", message: "something went wrong!")
                                     print(data)
                                     // Handle other status codes
                                     break
@@ -75,7 +75,7 @@ extension RecipeInstructionsViewController {
                             
                         case .failure(let error):
                             print(error)
-                            self.showAlert(message: "check your internet connection and try again.")
+                            self.showAlert(title: "Error", message: "check your internet connection and try again.")
                             // Handle network errors
                             break
                         }
