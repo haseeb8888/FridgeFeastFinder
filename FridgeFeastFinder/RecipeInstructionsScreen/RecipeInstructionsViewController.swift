@@ -61,7 +61,7 @@ class RecipeInstructionsViewController: UIViewController {
             return
         }
         
-        let documentRef = firestoreDB.collection(bookmarksCollection).document(userId)
+        let documentRef = firestoreDB.collection(bookmarksCollection).document(userId).collection("recipeId").document(recipe.id.description)
         
         if isBookmarked {
             // Recipe is already bookmarked, remove it
@@ -78,19 +78,20 @@ class RecipeInstructionsViewController: UIViewController {
             return
         }
 
-        let documentRef = firestoreDB.collection(bookmarksCollection).document(userId)
+        if let id = self.id {
+            let documentRef = firestoreDB.collection(bookmarksCollection).document(userId).collection("recipeId").document(id.description)
+            documentRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    // Recipe is bookmarked
+                    self.isBookmarked = true
+                } else {
+                    // Recipe is not bookmarked
+                    self.isBookmarked = false
+                }
 
-        documentRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                // Recipe is bookmarked
-                self.isBookmarked = true
-            } else {
-                // Recipe is not bookmarked
-                self.isBookmarked = false
+                // Update the bookmark button based on the status
+                self.updateBookmarkButton()
             }
-
-            // Update the bookmark button based on the status
-            self.updateBookmarkButton()
         }
     }
     

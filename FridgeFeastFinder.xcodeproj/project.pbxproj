@@ -49,6 +49,9 @@
 		0FC179952B067A5200A1397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179932B067A5200A1397A /* Main.storyboard */; };
 		0FC179972B067A5400A1397A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179962B067A5400A1397A /* Assets.xcassets */; };
 		0FC1799A2B067A5400A1397A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC179982B067A5400A1397A /* LaunchScreen.storyboard */; };
+		0FE557092B1F7F39003345FD /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE557082B1F7F39003345FD /* BookmarksTableViewCell.swift */; };
+		0FE5570B2B1F7F60003345FD /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5570A2B1F7F60003345FD /* BookmarksView.swift */; };
+		0FE5570D2B1F7F82003345FD /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE5570C2B1F7F82003345FD /* BookmarksViewController.swift */; };
 		8709549E2B158C8C0090E9B8 /* DisplayRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */; };
 		870954A02B158CA40090E9B8 /* DisplayRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8709549F2B158CA40090E9B8 /* DisplayRecipeViewController.swift */; };
 		870954A22B158F1D0090E9B8 /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870954A12B158F1D0090E9B8 /* RecipesTableViewCell.swift */; };
@@ -101,6 +104,9 @@
 		0FC179962B067A5400A1397A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC179992B067A5400A1397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC1799B2B067A5400A1397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE557082B1F7F39003345FD /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
+		0FE5570A2B1F7F60003345FD /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
+		0FE5570C2B1F7F82003345FD /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		59FD704A9F43599DD09591EE /* Pods-FridgeFeastFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeFeastFinder.debug.xcconfig"; path = "Target Support Files/Pods-FridgeFeastFinder/Pods-FridgeFeastFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7DE4FADC333281993A37AC /* Pods_FridgeFeastFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FridgeFeastFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8709549D2B158C8C0090E9B8 /* DisplayRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRecipeView.swift; sourceTree = "<group>"; };
@@ -202,13 +208,6 @@
 			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
-		0F3D47D52B169C4A009E10A7 /* BookMarksScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BookMarksScreen;
-			sourceTree = "<group>";
-		};
 		0F3D47DE2B1A7825009E10A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,12 +251,12 @@
 		0FC1798C2B067A5200A1397A /* FridgeFeastFinder */ = {
 			isa = PBXGroup;
 			children = (
+				0FE557072B1F7F1B003345FD /* BookmarksScreen */,
 				0F3D47FB2B1BF429009E10A7 /* Upload View Recipes */,
 				0F3D47DE2B1A7825009E10A7 /* Utils */,
 				9B93A3DD2B18794D009DBE4A /* APIConfigs.swift */,
 				8770BB832B198F19003CF939 /* Data Models */,
 				87E22F682B1850ED00425A63 /* RecipeInstructionsScreen */,
-				0F3D47D52B169C4A009E10A7 /* BookMarksScreen */,
 				0F3D47D02B1695F1009E10A7 /* ProfileScreen */,
 				870954A32B1592AF0090E9B8 /* IngredientSelectionScreen */,
 				8709549C2B158C680090E9B8 /* DisplayRecipesScreen */,
@@ -276,6 +275,16 @@
 				0F3D47AA2B150D85009E10A7 /* GoogleService-Info.plist */,
 			);
 			path = FridgeFeastFinder;
+			sourceTree = "<group>";
+		};
+		0FE557072B1F7F1B003345FD /* BookmarksScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0FE557082B1F7F39003345FD /* BookmarksTableViewCell.swift */,
+				0FE5570A2B1F7F60003345FD /* BookmarksView.swift */,
+				0FE5570C2B1F7F82003345FD /* BookmarksViewController.swift */,
+			);
+			path = BookmarksScreen;
 			sourceTree = "<group>";
 		};
 		49BFD6BB7FE2C1CD99812B84 /* Frameworks */ = {
@@ -466,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE5570D2B1F7F82003345FD /* BookmarksViewController.swift in Sources */,
 				0FC179922B067A5200A1397A /* ViewController.swift in Sources */,
 				0FB8BD272B1E5441008EB7C9 /* RecipeInstructionsAPICall.swift in Sources */,
 				0F3D47F62B1BCF58009E10A7 /* FindByIngredientsResponse.swift in Sources */,
@@ -474,6 +484,7 @@
 				0F3D479B2B0D4499009E10A7 /* MainView.swift in Sources */,
 				0F3D47F82B1BDE68009E10A7 /* ProfileProgressManager.swift in Sources */,
 				0F3D47BB2B15114F009E10A7 /* ProgressSpinnerViewController.swift in Sources */,
+				0FE557092B1F7F39003345FD /* BookmarksTableViewCell.swift in Sources */,
 				0F3D47E42B1A78D9009E10A7 /* User.swift in Sources */,
 				870954A52B1592D50090E9B8 /* IngredientSelectionViewController.swift in Sources */,
 				0F3D47E02B1A7844009E10A7 /* FireBaseConstants.swift in Sources */,
@@ -499,6 +510,7 @@
 				0F3D47D42B169626009E10A7 /* ProfileView.swift in Sources */,
 				0F3D47CD2B166EB4009E10A7 /* FFFTabBarController.swift in Sources */,
 				0F3D47C12B152307009E10A7 /* CreateProgressIndicatorManager.swift in Sources */,
+				0FE5570B2B1F7F60003345FD /* BookmarksView.swift in Sources */,
 				0FC1798E2B067A5200A1397A /* AppDelegate.swift in Sources */,
 				0F3D48052B1C1726009E10A7 /* UserRecipeUploadView.swift in Sources */,
 				0F3D47C42B15342C009E10A7 /* DashBoardView.swift in Sources */,

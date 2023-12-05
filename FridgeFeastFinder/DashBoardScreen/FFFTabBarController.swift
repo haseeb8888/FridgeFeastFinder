@@ -26,7 +26,7 @@ class FFFTabBarController: UITabBarController {
     
     
     func createBookmarksNC() -> UINavigationController {
-        let homeVC = DashBoardViewController()
+        let homeVC = BookmarksViewController()
         homeVC.title = "Bookmarks"
         homeVC.tabBarItem = UITabBarItem(title: "Bookmarks", image: UIImage(systemName: "bookmark.fill"), tag: 1)
         
