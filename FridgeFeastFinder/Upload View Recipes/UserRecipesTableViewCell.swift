@@ -27,7 +27,7 @@ class UserRecipesTableViewCell: UITableViewCell {
         setupPostImageView()
         setupCommentTextLabel()
         setupEmailTextLabel()
-        setupLikeButton()
+        // setupLikeButton()
         setupLikesCountLabel()
         initConstraints()
     }
@@ -107,11 +107,6 @@ class UserRecipesTableViewCell: UITableViewCell {
             emailText.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
             emailText.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
             emailText.bottomAnchor.constraint(equalTo: wrapperCellView.bottomAnchor, constant: -8),
-            
-            likeButton.topAnchor.constraint(equalTo: emailText.topAnchor),
-            likeButton.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -8),
-            likeButton.heightAnchor.constraint(equalToConstant: 20),
-            likeButton.widthAnchor.constraint(equalToConstant: 20),
         ])
     }
     
