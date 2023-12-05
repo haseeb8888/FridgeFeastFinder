@@ -14,9 +14,9 @@
             filePath = "FridgeFeastFinder/IngredientSelectionScreen/IngredientSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "showAddIngredientAlert()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "onPlusButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

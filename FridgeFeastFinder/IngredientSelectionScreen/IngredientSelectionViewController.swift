@@ -14,8 +14,6 @@ class IngredientSelectionViewController: UIViewController {
     
     var ingredients = [Ingredient]()
     
-    
-    
     override func loadView() {
         view = ingredientSelectionView
         ingredientSelectionView.searchRecipeButton.addTarget(self, action: #selector(onSearchRecipeButtonTapped), for: .touchUpInside)
@@ -36,7 +34,7 @@ class IngredientSelectionViewController: UIViewController {
     
     @objc func onSearchRecipeButtonTapped(){
         if (self.ingredients.isEmpty) {
-            showAlert(message: "Add atleast one ingredient to display Recipes.")
+            showAlert(message: "Add at least one ingredient to display Recipes.")
             return
         }
         getRecipes(ingredients: self.ingredients)
