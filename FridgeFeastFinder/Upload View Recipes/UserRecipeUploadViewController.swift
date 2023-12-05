@@ -28,6 +28,7 @@ class UserRecipeUploadViewController: UIViewController {
         super.viewDidLoad()
         userRecipeUploadView.uploadButton.addTarget(self, action: #selector(onUploadButtonTapped), for: .touchUpInside)
         userRecipeUploadView.imageView.menu = getMenuImagePicker()
+        hideKeyboardOnTapOutside()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,20 @@ class UserRecipeUploadViewController: UIViewController {
             // Ensure pickedImage is nil or set it to your default image if needed
             pickedImage = UIImage(systemName: "camera")
         }
+    
+    //MARK: hide keyboard logic...
+    func hideKeyboardOnTapOutside(){
+        //MARK: recognizing the taps on the app screen, not the keyboard...
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap))
+        tapRecognizer.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    //MARK: Hide Keyboard...
+    @objc func hideKeyboardOnTap(){
+        //MARK: removing the keyboard from screen...
+        view.endEditing(true)
+    }
     
     @objc func onUploadButtonTapped(){
         guard let pickedImage = self.pickedImage else {

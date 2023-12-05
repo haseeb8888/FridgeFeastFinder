@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signInView.loginButton.addTarget(self, action: #selector(onLoginTapped), for: .touchUpInside)
+        hideKeyboardOnTapOutside()
     }
     
     @objc func onLoginTapped() {
@@ -35,6 +36,20 @@ class SignInViewController: UIViewController {
         }
         self.showActivityIndicator()
         signInToFireBase(email: email, password: password)
+    }
+    
+    //MARK: hide keyboard logic...
+    func hideKeyboardOnTapOutside(){
+        //MARK: recognizing the taps on the app screen, not the keyboard...
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap))
+        tapRecognizer.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    //MARK: Hide Keyboard...
+    @objc func hideKeyboardOnTap(){
+        //MARK: removing the keyboard from screen...
+        view.endEditing(true)
     }
     
     func signInToFireBase(email: String, password: String) {
