@@ -263,6 +263,9 @@ class ProfileViewController: UIViewController {
                     for: .normal
                 )
                 self.pickedImage = image
+                if let pickedImage = self.pickedImage {
+                    self.saveProfileImageToFirestore(image: pickedImage)
+                }
                 print("called")
                 
             }else{
