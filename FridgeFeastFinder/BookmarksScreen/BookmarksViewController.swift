@@ -40,25 +40,25 @@ class BookmarksViewController: UIViewController {
             // User not authenticated
             return
         }
-
+        
         let firestoreDB = Firestore.firestore()
         let bookmarksCollection = firestoreDB.collection("bookmarks")
         let userBookmarkCollection = bookmarksCollection.document(userId).collection("recipeId")
-
+        
         userBookmarkCollection.getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error fetching documents: \(error.localizedDescription)")
                 return
             }
-
+            
             guard let documents = querySnapshot?.documents else {
                 print("No documents found")
                 return
             }
-
+            
             // Clear existing data in dataArray
             self.dataArray.removeAll()
-
+            
             for document in documents {
                 do {
                     // Decode each document into BookMarksResponse
@@ -70,13 +70,13 @@ class BookmarksViewController: UIViewController {
                     print("Error decoding bookmark data: \(error.localizedDescription)")
                 }
             }
-
+            
             // Reload the table view to reflect the changes
             self.bookmarksScreen.tableViewBookmarks.reloadData()
             print("called")
         }
     }
-
+    
 }
 
 
@@ -97,12 +97,13 @@ extension BookmarksViewController: UITableViewDelegate, UITableViewDataSource{
     //MARK: deal with user interaction with a cell...
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(self.dataArray[indexPath.row])
-        //        let recipeDetailVC = RecipeInstructionsViewController()
-        //        recipeDetailVC.id = dataArray[indexPath.row].id
-        //        navigationController?.pushViewController(recipeDetailVC, animated: true)
+        // self.showActivityIndicator()
+        let recipeDetailVC = RecipeInstructionsViewController()
+        recipeDetailVC.id = dataArray[indexPath.row].id
+        navigationController?.pushViewController(recipeDetailVC, animated: true)
+        //  self.hideActivityIndicator()
     }
-    
-    
+
 }
 
 struct BookMarksResponse: Codable {
