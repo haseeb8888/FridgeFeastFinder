@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     let profileView = ProfileView()
     //MARK: variable to store the picked Image...
     var pickedImage:UIImage?
+    let notificationCenter = NotificationCenter.default
     
     let childProgressView = ProgressSpinnerViewController()
     
@@ -92,9 +93,13 @@ class ProfileViewController: UIViewController {
             logoutAlert.addAction(UIAlertAction(title: "Yes, log out!", style: .default, handler: {(_) in
                 do{
                     try Auth.auth().signOut()
-                    guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
+//                    guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else { return }
                     // Call the function to reset the window's rootViewController
-                    sceneDelegate.showMainApp()
+                    // sceneDelegate.showMainApp()
+                    self.notificationCenter.post(
+                                    name: Notification.Name("textFromSecondScreen"),
+                                    object: nil)
+                    print("notification sent")
                 }catch{
                     self.showErrorAlert(message: error.localizedDescription)
                     print("Error occured!")
